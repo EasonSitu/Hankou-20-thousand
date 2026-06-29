@@ -71,31 +71,6 @@
       text-underline-offset: 3px;
     }
 
-    .subtitle {
-      margin: 0;
-      color: var(--muted);
-      font-size: 15px;
-    }
-
-    .meta {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-top: 14px;
-    }
-
-    .pill {
-      display: inline-flex;
-      align-items: center;
-      min-height: 28px;
-      padding: 3px 9px;
-      border: 1px solid var(--line);
-      border-radius: 999px;
-      background: rgba(255, 250, 240, .72);
-      color: var(--muted);
-      font-size: 13px;
-    }
-
     .notice {
       margin: 18px 0;
       padding: 12px 14px;
@@ -252,6 +227,48 @@
       border: 1px solid var(--line);
       border-radius: 10px;
       box-shadow: 0 2px 12px rgba(36, 33, 29, .06);
+    }
+
+    .nav-toggle {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      width: 38px;
+      height: 38px;
+      margin: 0 0 8px auto;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: #fbf3e4;
+      color: var(--accent);
+      cursor: pointer;
+    }
+
+    .nav-toggle:hover,
+    .nav-toggle:focus {
+      background: var(--soft);
+      outline: 3px solid rgba(31, 111, 120, .14);
+      outline-offset: 2px;
+    }
+
+    .nav-toggle svg {
+      width: 18px;
+      height: 18px;
+      stroke: currentColor;
+    }
+
+    .side-nav.is-collapsed {
+      width: 56px;
+      padding: 8px;
+      overflow: visible;
+    }
+
+    .side-nav.is-collapsed .search-panel,
+    .side-nav.is-collapsed .side-nav-inner {
+      display: none;
+    }
+
+    .side-nav.is-collapsed .nav-toggle {
+      margin: 0;
     }
 
     .side-title {
@@ -671,6 +688,16 @@
         box-shadow: 0 2px 10px rgba(36, 33, 29, .08);
       }
 
+      .side-nav.is-collapsed {
+        width: auto;
+        max-width: 56px;
+        margin: 0 0 12px 0;
+        border: 1px solid var(--line);
+        border-top: 0;
+        border-left: 0;
+        border-radius: 0 0 10px 0;
+      }
+
       .side-nav-inner {
         display: flex;
         gap: 8px;
@@ -728,19 +755,17 @@
   <header id="top">
     <main>
       <h1>汉口近代建筑扫街口袋手册</h1>
-      <p class="subtitle">水塔街过早出发，经江汉路、沿江大道、黎黄陂路、鄱阳街、洞庭街，到平和打包厂与咸安坊一带。适合边走边读，不追求把所有馆都进完。</p>
-      <div class="meta">
-        <span class="pill">路线：水塔街—江汉路—沿江大道—黎黄陂路</span>
-        <span class="pill">主题：老汉口商业、租界、银行、洋行、里份</span>
-        <span class="pill">资料状态：2026年6月整理，开放/预约可能变化</span>
-        <span class="pill">属性：非官方整理，路线来源见致谢</span>
-        <span class="pill">建议：按体力选择精华线或完整线</span>
-      </div>
     </main>
   </header>
 
   <div class="page-layout">
   <aside class="side-nav" aria-label="景点快速跳转与地点搜索">
+    <button class="nav-toggle" type="button" id="nav-toggle" aria-label="收起搜索与跳转" aria-expanded="true" aria-controls="site-search side-links">
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="11" cy="11" r="7"></circle>
+        <path d="m16.5 16.5 4 4"></path>
+      </svg>
+    </button>
     <div class="search-panel" role="search">
       <label class="search-label" for="site-search">地点搜索</label>
       <div class="search-row">
@@ -754,7 +779,7 @@
       </div>
       <div class="search-results" id="search-results" aria-live="polite"></div>
     </div>
-    <div class="side-nav-inner">
+    <div class="side-nav-inner" id="side-links">
       <p class="side-title">景点快速跳转</p>
       <a class="side-link side-home" href="#top">↑ 回到顶部</a>
       <a class="side-link side-home" href="#about-author">序言与致谢</a>
@@ -1629,6 +1654,8 @@
       const nextResult = document.getElementById("next-result");
       const searchCount = document.getElementById("search-count");
       const searchResults = document.getElementById("search-results");
+      const sideNav = document.querySelector(".side-nav");
+      const navToggle = document.getElementById("nav-toggle");
       const modeButtons = Array.from(document.querySelectorAll(".mode-btn"));
       const episodeFilter = document.getElementById("episode-filter");
       const modeNote = document.getElementById("mode-note");
@@ -1831,7 +1858,19 @@
         searchCount.textContent = `找到 ${matches.length} 个相关地点，当前 ${activeMatchIndex + 1}/${matches.length}${meta ? "：" + meta.title : ""}`;
       }
 
+      function setNavCollapsed(collapsed) {
+        sideNav.classList.toggle("is-collapsed", collapsed);
+        navToggle.setAttribute("aria-expanded", String(!collapsed));
+        navToggle.setAttribute("aria-label", collapsed ? "展开搜索与跳转" : "收起搜索与跳转");
+        if (!collapsed) {
+          setTimeout(() => searchInput.focus({ preventScroll: true }), 0);
+        }
+      }
+
       searchInput.addEventListener("input", applyFilters);
+      navToggle.addEventListener("click", () => {
+        setNavCollapsed(!sideNav.classList.contains("is-collapsed"));
+      });
       clearSearch.addEventListener("click", () => {
         searchInput.value = "";
         applyFilters();
