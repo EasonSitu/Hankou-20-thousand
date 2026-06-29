@@ -531,6 +531,25 @@
       font-size: 13px;
     }
 
+    .map-card {
+      display: grid;
+      gap: 12px;
+      margin-top: 14px;
+      padding: 12px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fbf3e4;
+    }
+
+    .map-card figure {
+      margin: 0;
+    }
+
+    .map-card img {
+      max-height: 360px;
+      object-fit: contain;
+    }
+
     .requirements-grid {
       display: grid;
       gap: 10px;
@@ -738,7 +757,7 @@
     <div class="side-nav-inner">
       <p class="side-title">景点快速跳转</p>
       <a class="side-link side-home" href="#top">↑ 回到顶部</a>
-      <a class="side-link side-home" href="#guide-principles">读者与使用方式</a>
+      <a class="side-link side-home" href="#about-author">序言与致谢</a>
       <p class="side-group-title">上午</p>
       <a class="side-link" href="#stop-01">1 汉口水塔</a>
       <a class="side-link" href="#stop-02">2 水塔街与前进五路过早</a>
@@ -788,80 +807,29 @@
     </div>
 
     <section class="author-box" id="about-author">
-      <h2>致谢与使用说明</h2>
-      <p>核心路线参考 B 站 UP 主“艺术与设计史”的“汉口两万步”系列。实地拍摄、建筑辨认、路线组织和问题意识来自原作者；本页只是把路线顺序、公开资料、开放提示和现场观察点整理成便于手机阅读的非官方手册。</p>
-      <p>适合普通游客、建筑兴趣用户，以及想复走视频路线的观众使用。它不代表原 UP 主立场，不是官方导览，也不替代场馆公告。涉及住户、办公机构、宗教场所和正在营业的空间，请把现场秩序放在拍照与探访之前。</p>
-      <p>所谓“粉丝向”，在这里指对原路线和资料工作的尊重：来源要写清楚，判断要留余地，文字不搬运逐字稿，也不把旅行变成打卡任务。</p>
-    </section>
-
-    <section class="route-block" id="guide-principles">
-      <h2>读者与使用方式</h2>
-      <p>这份手册按“先能走，再能看懂”的顺序组织：先给路线、开放提示和删减建议，再补建筑背景。看过视频的人可以按集数复走；没有看过视频的人，也可以把它当作一条老汉口建筑散步线。</p>
-
-      <div class="audience-list">
-        <div class="audience-item">
-          <strong>普通游客</strong>
-          <p>需要少做功课也能上手：知道精华路线、停留时间、可否入内、现场看什么，以及什么时候该删点休息。</p>
+      <h2>序言与致谢</h2>
+      <p>这份手册是一条老汉口近代建筑散步线，也是一份给看过视频的粉丝复走用的现场读本。核心路线参考 B 站 UP 主 <a href="https://space.bilibili.com/9862450?spm_id_from=333.337.0.0">“艺术与设计史”</a> 的“汉口两万步”系列：实地拍摄、建筑辨认、路线组织和问题意识来自原作者；本页由 B站用户 Ea-sons 制作，只做非官方整理。</p>
+      <p>使用时可以先选路线，再看每站的“它是什么”和“现场怎么看”。历史说明参考视频中的观察和公开资料；开放、预约、闭馆日的信息按2026年6月资料标注，后续可能过时，请自行查阅。</p>
+      <p>老建筑常被银行、机关、酒店、商铺使用。遇到保安、办公区、住户空间、宗教活动或禁止拍照提示，请以现场秩序为先。</p>
+      <div class="map-card">
+        <div>
+          <strong>高德地图扫码</strong>
+          <p>使用高德地图扫码，可以将完整点位导入地图；网页内的路线按钮则用于筛选下方站点和阅读顺序。</p>
         </div>
-        <div class="audience-item">
-          <strong>复走路线的观众</strong>
-          <p>需要对应视频集数、路线顺序和关键观察点，保留“艺术与设计史”的问题意识，但不搬运逐字稿。</p>
-        </div>
-        <div class="audience-item">
-          <strong>建筑兴趣用户</strong>
-          <p>需要按银行、教堂、洋行、里份、工业建筑等类型检索，方便横向比较风格、功能和历史背景。</p>
-        </div>
-        <div class="audience-item">
-          <strong>现场使用者</strong>
-          <p>需要手机上快速搜索、跳转、筛选，文字短段落化，重点用“现场怎么看”而不是长篇论文式叙述。</p>
-        </div>
+        <figure>
+          <img src="assets/gaode-hankou-guide-qr.png" alt="高德地图汉口两万步完整点位二维码">
+          <figcaption>长按或使用高德地图扫码，阅读完整点位指南。</figcaption>
+        </figure>
       </div>
-
-      <div class="requirements-grid">
-        <div class="requirement-card">
-          <h3>内容目标</h3>
-          <ul class="compact">
-            <li>每个站点至少回答：它是什么、为什么重要、现场看哪里、是否适合入内。</li>
-            <li>历史叙述优先使用公开资料、研究书目和文保信息校验。</li>
-            <li>视频中的观察可作为线索，但要和官方、书籍、场馆资料分开标注。</li>
-          </ul>
-        </div>
-        <div class="requirement-card">
-          <h3>体验目标</h3>
-          <ul class="compact">
-            <li>第一屏直接说明路线、主题和资料状态，方便现场打开就用。</li>
-            <li>支持完整路线、精华路线、跟着视频走、按建筑类型四种选择路线方式。</li>
-            <li>保留搜索和侧边快速跳转，方便在街上临时查点。</li>
-          </ul>
-        </div>
-        <div class="requirement-card">
-          <h3>引用边界</h3>
-          <ul class="compact">
-            <li>明确注明路线参考“艺术与设计史”的“汉口两万步”系列。</li>
-            <li>不冒充原作，不代表官方导览，不替代现场公告。</li>
-            <li>保留视频来源、书目来源和资料更新时间，方便继续核对。</li>
-          </ul>
-        </div>
-        <div class="requirement-card">
-          <h3>现场原则</h3>
-          <ul class="compact">
-            <li>不打扰住户、办公机构、宗教活动和场馆秩序。</li>
-            <li>遇到禁止拍照、预约、闭馆、办公区提示，以现场为准。</li>
-            <li>路线服务旅行体验；同行者兴趣下降时，优先切换到吃喝、休息或短线模式。</li>
-          </ul>
-        </div>
-      </div>
-
-      <p class="mode-note">选择路线建议：第一次来或带朋友，点“精华路线”；想复走视频，点“跟着视频走”；只想看某类建筑，点“按建筑类型”；做资料整理或深度扫街，再使用“完整路线”。</p>
     </section>
 
     <section class="route-tools" id="route-tools" aria-label="路线模式与筛选">
-      <h2>搜索与路线模式</h2>
+      <h2>路线选择</h2>
       <div class="tool-row" role="group" aria-label="路线模式">
-        <button class="mode-btn active" type="button" data-mode="all">完整路线</button>
-        <button class="mode-btn" type="button" data-mode="essential">精华路线</button>
-        <button class="mode-btn" type="button" data-mode="video">跟着视频走</button>
-        <button class="mode-btn" type="button" data-mode="type">按建筑类型</button>
+        <button class="mode-btn active" type="button" data-mode="video">跟视频分集</button>
+        <button class="mode-btn" type="button" data-mode="half">半日精华</button>
+        <button class="mode-btn" type="button" data-mode="day">一日精华</button>
+        <button class="mode-btn" type="button" data-mode="all">完整路线</button>
       </div>
       <div class="tool-row">
         <select class="select-control" id="episode-filter" aria-label="选择视频集数">
@@ -871,41 +839,20 @@
           <option value="3">第3集：胜利街到黎黄陂路</option>
           <option value="4">第4集：巴公房子到武汉美术馆</option>
         </select>
-        <select class="select-control" id="type-filter" aria-label="选择建筑类型">
-          <option value="">类型模式：全部类型</option>
-          <option value="bank">银行金融</option>
-          <option value="church">教堂宗教</option>
-          <option value="company">洋行商业</option>
-          <option value="consulate">领事馆/租界治理</option>
-          <option value="lane">里份住宅</option>
-          <option value="museum">博物馆/纪念馆</option>
-          <option value="industrial">工业建筑</option>
-          <option value="food">过早/休息</option>
-        </select>
       </div>
       <p class="tool-hint">现场建议：不知道叫什么就搜关键词，例如“俄国”“哥特”“银行”“预约”“教堂”“巴诺夫”。</p>
-      <div class="mode-note" id="mode-note">当前为完整路线：保留全部站点与可选点，适合出发前阅读或慢慢走。</div>
+      <div class="mode-note" id="mode-note">路线选择会直接改变下方显示的站点；搜索关键词时会临时覆盖路线筛选。</div>
     </section>
 
-    <section class="route-block">
-      <h2>资料底本与使用边界</h2>
-      <p>路线骨架来自 B 站 UP 主“艺术与设计史”的“汉口两万步”系列：第1集江汉路近现代建筑群，第2集沿江大道近现代建筑群，第3集胜利街到黎黄陂路，第4集巴公房子到武汉美术馆。它把单点建筑串成一条理解近代汉口商业城市的线索。</p>
-      <p>建筑说明参考视频中的现场观察，也参考原作者提到的资料体系，尤其是《湖北古建筑地图》和《汉口原租界建筑装饰》。后续若继续扩写，书名、年代、设计者、现状都应回到公开资料和实体书核对。</p>
-      <p>官方/机构资料主要用于校验建筑名称、文保身份、开放时间和现状；第三方平台只作为辅助判断“现在能不能进、现场体验如何”，不作为历史细节的核心依据。涉及开放、预约、闭馆日的信息均按2026年6月资料标注，后续可能过时，请自行查阅。</p>
+    <section class="route-block route-plan hidden-by-filter" id="route-plan-half" data-plan="half">
+      <h2>半日精华</h2>
+      <p><strong>水塔街过早</strong>，顺便看汉口水塔。</p>
+      <p><strong>江汉路近现代建筑群</strong>，主线看广东银行、中国实业银行、台湾银行和江汉关。</p>
+      <p><strong>江汉关博物馆</strong>，想进就进；时间紧也可以只看外立面和江边位置。</p>
+      <p><strong>收线建议</strong>：半日线到江汉关即可停下，适合体力有限、天气闷热或只想抓住老汉口金融街主线的情况。</p>
     </section>
 
-    <nav class="toc" aria-label="目录">
-      <a href="#about-author">致谢与使用说明</a>
-      <a href="#guide-principles">读者与使用方式</a>
-      <a href="#route-tools">搜索与路线模式</a>
-      <a href="#morning">上午：水塔街到江汉关</a>
-      <a href="#riverfront">中午后：沿江大道建筑群</a>
-      <a href="#neighborhood">下午：黎黄陂路、鄱阳街、洞庭街</a>
-      <a href="#optional">可选与跳过点</a>
-      <a href="#sources">资料来源</a>
-    </nav>
-
-    <section class="route-block">
+    <section class="route-block route-plan hidden-by-filter" id="route-plan-day" data-plan="day">
       <h2>一日节奏</h2>
       <p><strong>08:30-09:30</strong> 水塔街过早，顺便看汉口水塔。</p>
       <p><strong>09:30-11:30</strong> 江汉路近现代建筑群，主线是中资银行、商业住宅和江汉关。</p>
@@ -915,8 +862,7 @@
       <p><strong>15:00-16:30</strong> 黎黄陂路、鄱阳街、洞庭街：泰兴里/同兴里、武汉警察博物馆、圣母无原罪堂、八七会议、巴公房子、平和打包厂。若体力不够，警察博物馆与圣母无原罪堂可二选一。</p>
     </section>
 
-    <section id="morning">
-      <h2>上午：水塔街到江汉关</h2>
+    <section id="morning" aria-label="水塔街到江汉关">
 
       <article class="stop" id="stop-01">
         <div class="stop-head">
@@ -1135,8 +1081,7 @@
       </article>
     </section>
 
-    <section id="riverfront">
-      <h2>中午后：沿江大道建筑群</h2>
+    <section id="riverfront" aria-label="沿江大道建筑群">
 
       <article class="stop" id="stop-11">
         <div class="stop-head">
@@ -1310,8 +1255,7 @@
       </article>
     </section>
 
-    <section id="neighborhood">
-      <h2>下午：黎黄陂路、鄱阳街、洞庭街</h2>
+    <section id="neighborhood" aria-label="黎黄陂路、鄱阳街、洞庭街">
 
       <article class="stop" id="stop-19">
         <div class="stop-head">
@@ -1596,8 +1540,7 @@
       <p>本手册综合“艺术与设计史”四期视频路线、逐字稿整理、截图线索，以及以下资料。开放时间、预约方式和运营状态按2026年6月资料标注，后续可能过时，请以当天官方/现场为准。</p>
       <p><strong>核心路线与讲解底本</strong></p>
       <ul class="source-list">
-        <li>艺术与设计史：《汉口两万步 ① 江汉路近现代建筑群》</li>
-        <li><a href="https://search.bilibili.com/all?keyword=%E8%89%BA%E6%9C%AF%E4%B8%8E%E8%AE%BE%E8%AE%A1%E5%8F%B2%20%E6%B1%89%E5%8F%A3%E4%B8%A4%E4%B8%87%E6%AD%A5">B站检索：艺术与设计史 汉口两万步</a></li>
+        <li><a href="https://space.bilibili.com/9862450?spm_id_from=333.337.0.0">艺术与设计史</a>：《汉口两万步 ① 江汉路近现代建筑群》</li>
         <li>艺术与设计史：《汉口两万步 ② 沿江大道近现代建筑群》</li>
         <li>艺术与设计史：《汉口两万步 ③ 从胜利街到黎黄陂路》</li>
         <li>艺术与设计史：《汉口两万步 ④ 从巴公房子到武汉美术馆》</li>
@@ -1620,12 +1563,9 @@
         <li><a href="https://wlj.wuhan.gov.cn/zfxxgk/fdzdgknr/jgjj/zsdw/202310/t20231017_2281350.shtml">武汉市文化和旅游局：武汉美术馆</a></li>
         <li><a href="https://www.jiangan.gov.cn/">江岸区人民政府公开资料：公共文化服务、历史建筑及场馆名录</a></li>
       </ul>
-      <p><strong>后续做网页可继续深挖的关键词</strong></p>
+      <p><strong>补充检索入口</strong></p>
       <ul class="source-list">
-        <li>汉口原租界建筑群、汉口历史文化风貌区、汉口优秀历史建筑名录</li>
-        <li>景明洋行、汉协盛营造厂、卢镛标、庄俊、Henry Murphy</li>
-        <li>万里茶道、汉口俄商、巴诺夫、新泰洋行、平和打包厂</li>
-        <li>江汉关、汉口开埠、英俄法德日租界、汉口小华尔街</li>
+        <li><a href="https://search.bilibili.com/all?keyword=%E8%89%BA%E6%9C%AF%E4%B8%8E%E8%AE%BE%E8%AE%A1%E5%8F%B2%20%E6%B1%89%E5%8F%A3%E4%B8%A4%E4%B8%87%E6%AD%A5">B站检索：艺术与设计史 汉口两万步</a></li>
       </ul>
       <p class="footer-note">版本：2026-06-29 搜索与路线模式版。开放/预约信息按2026年6月资料整理，后续可能过时；本页为非官方整理，不代表原 UP 主或官方导览。</p>
     </section>
@@ -1669,22 +1609,18 @@
         "optional-river": { title: "江滩深走", episode: "", types: ["food"], essential: false, keywords: "江滩 轮渡 武汉关码头 可选" }
       };
 
-      const typeNames = {
-        bank: "银行金融",
-        church: "教堂宗教",
-        company: "洋行商业",
-        consulate: "领事馆/租界治理",
-        lane: "里份住宅",
-        museum: "博物馆/纪念馆",
-        industrial: "工业建筑",
-        food: "过早/休息"
-      };
+      const halfRouteStops = new Set(["stop-01", "stop-02", "stop-04", "stop-08", "stop-09", "stop-10"]);
+      const dayRouteStops = new Set([
+        "stop-01", "stop-02", "stop-04", "stop-08", "stop-10",
+        "stop-11", "stop-12", "stop-13", "stop-15",
+        "stop-20", "stop-21a", "stop-21b", "stop-22", "stop-24"
+      ]);
 
       const notes = {
-        all: "当前为完整路线：保留全部站点与可选点，适合出发前阅读或慢慢走。",
-        essential: "当前为精华路线：只突出核心站点，适合天气闷热、时间有限或第一次扫街。",
-        video: "当前为跟着视频走：可按《汉口两万步》第1—4集筛选站点。",
-        type: "当前为按建筑类型看：可筛选银行、教堂、洋行、里份、博物馆等类型。"
+        video: "路线选择会直接改变下方显示的站点。当前为跟视频分集：可按《汉口两万步》第1—4集筛选；不选集数时显示视频主线全部站点。",
+        half: "路线选择会直接改变下方显示的站点。当前为半日精华：保留水塔街、江汉路和江汉关一线。",
+        day: "路线选择会直接改变下方显示的站点。当前为一日精华：保留一日线关键站点，并显示下方的一日节奏。",
+        all: "路线选择会直接改变下方显示的站点。当前为完整路线：保留全部站点与可选点，适合出发前阅读或慢慢走。"
       };
 
       const searchInput = document.getElementById("site-search");
@@ -1695,11 +1631,11 @@
       const searchResults = document.getElementById("search-results");
       const modeButtons = Array.from(document.querySelectorAll(".mode-btn"));
       const episodeFilter = document.getElementById("episode-filter");
-      const typeFilter = document.getElementById("type-filter");
       const modeNote = document.getElementById("mode-note");
       const stops = Array.from(document.querySelectorAll(".stop"));
+      const routePlans = Array.from(document.querySelectorAll(".route-plan"));
 
-      let activeMode = "all";
+      let activeMode = "video";
       let matches = [];
       let activeMatchIndex = -1;
 
@@ -1793,14 +1729,11 @@
         const meta = stopMeta[stop.id];
         if (!meta) return activeMode === "all";
         if (activeMode === "all") return true;
-        if (activeMode === "essential") return meta.essential;
+        if (activeMode === "half") return halfRouteStops.has(stop.id);
+        if (activeMode === "day") return dayRouteStops.has(stop.id);
         if (activeMode === "video") {
           const ep = episodeFilter.value;
           return ep ? meta.episode === ep : Boolean(meta.episode);
-        }
-        if (activeMode === "type") {
-          const type = typeFilter.value;
-          return type ? meta.types.includes(type) : true;
         }
         return true;
       }
@@ -1835,9 +1768,18 @@
         });
 
         updateSections();
+        updateRoutePlans(terms);
         updateResults(terms);
         modeButtons.forEach((btn) => btn.classList.toggle("active", btn.dataset.mode === activeMode));
         modeNote.textContent = terms.length ? "当前为搜索结果：搜索会临时覆盖路线模式，清除关键词后恢复筛选。" : notes[activeMode];
+      }
+
+      function updateRoutePlans(terms) {
+        routePlans.forEach((plan) => {
+          const shouldShow = !terms.length && plan.dataset.plan === activeMode;
+          plan.classList.toggle("hidden-by-filter", !shouldShow);
+        });
+        episodeFilter.disabled = activeMode !== "video";
       }
 
       function updateSections() {
@@ -1901,16 +1843,11 @@
         button.addEventListener("click", () => {
           activeMode = button.dataset.mode;
           if (activeMode !== "video") episodeFilter.value = "";
-          if (activeMode !== "type") typeFilter.value = "";
           applyFilters();
         });
       });
       episodeFilter.addEventListener("change", () => {
         activeMode = "video";
-        applyFilters();
-      });
-      typeFilter.addEventListener("change", () => {
-        activeMode = "type";
         applyFilters();
       });
       document.querySelectorAll(".side-link").forEach((link) => {
