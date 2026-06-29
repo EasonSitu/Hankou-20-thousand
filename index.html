@@ -1,0 +1,1907 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>汉口近代建筑扫街口袋手册</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f7f4ed;
+      --paper: #fffaf0;
+      --ink: #24211d;
+      --muted: #6c6258;
+      --line: #ded4c3;
+      --accent: #8f3f2d;
+      --accent-2: #1f6f78;
+      --soft: #efe4d2;
+      --green: #406b4a;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
+        "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+      line-height: 1.72;
+      color: var(--ink);
+      background: var(--bg);
+    }
+
+    header {
+      padding: 28px 18px 18px;
+      background: linear-gradient(180deg, #efe4d2 0%, #f7f4ed 100%);
+      border-bottom: 1px solid var(--line);
+    }
+
+    main {
+      max-width: 880px;
+      margin: 0 auto;
+      padding: 0 14px 48px;
+    }
+
+    h1 {
+      margin: 0 0 10px;
+      font-size: 28px;
+      line-height: 1.18;
+      letter-spacing: 0;
+    }
+
+    h2 {
+      margin: 34px 0 12px;
+      padding-top: 8px;
+      font-size: 22px;
+      border-top: 2px solid var(--line);
+      letter-spacing: 0;
+    }
+
+    h3 {
+      margin: 0 0 8px;
+      font-size: 20px;
+      line-height: 1.35;
+      letter-spacing: 0;
+    }
+
+    p { margin: 8px 0; }
+
+    a {
+      color: var(--accent-2);
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
+
+    .subtitle {
+      margin: 0;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 14px;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      min-height: 28px;
+      padding: 3px 9px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(255, 250, 240, .72);
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .notice {
+      margin: 18px 0;
+      padding: 12px 14px;
+      background: #fff7dc;
+      border: 1px solid #ecd083;
+      border-radius: 8px;
+      color: #584417;
+    }
+
+    .toc {
+      display: grid;
+      gap: 8px;
+      margin: 18px 0 24px;
+      padding: 12px;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+    }
+
+    .toc a {
+      display: block;
+      padding: 7px 9px;
+      border-radius: 6px;
+      background: #fbf3e4;
+      text-decoration: none;
+      color: var(--ink);
+    }
+
+    .route-block {
+      margin: 16px 0 24px;
+      padding: 14px;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+    }
+
+    .stop {
+      margin: 18px 0;
+      padding: 16px 14px;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      box-shadow: 0 1px 0 rgba(0, 0, 0, .03);
+    }
+
+    .stop-head {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+    }
+
+    .num {
+      flex: 0 0 auto;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background: var(--accent);
+      color: white;
+      font-weight: 700;
+      font-size: 15px;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin: 8px 0 10px;
+    }
+
+    .tag {
+      display: inline-block;
+      padding: 2px 7px;
+      border-radius: 5px;
+      background: var(--soft);
+      color: #5a4637;
+      font-size: 12px;
+    }
+
+    .tag.green {
+      color: white;
+      background: var(--green);
+    }
+
+    .section-title {
+      margin-top: 12px;
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    ul {
+      margin: 6px 0 8px;
+      padding-left: 20px;
+    }
+
+    li { margin: 3px 0; }
+
+    .compact li { margin: 2px 0; }
+
+    .skip {
+      border-left: 5px solid #b6ab9b;
+      background: #f4efe6;
+    }
+
+    .source-list {
+      padding-left: 18px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .source-list li { margin-bottom: 6px; }
+
+    .footer-note {
+      margin-top: 30px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+
+    html { scroll-behavior: smooth; }
+
+    #top,
+    section,
+    .stop {
+      scroll-margin-top: 18px;
+    }
+
+    .page-layout {
+      display: grid;
+      grid-template-columns: 232px minmax(0, 880px);
+      gap: 22px;
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 0 14px 48px;
+      align-items: start;
+    }
+
+    .page-layout > main {
+      max-width: none;
+      margin: 0;
+      padding: 0 0 48px;
+    }
+
+    .side-nav {
+      position: sticky;
+      top: 16px;
+      max-height: calc(100vh - 32px);
+      overflow: auto;
+      margin-top: 18px;
+      padding: 12px;
+      background: rgba(255, 250, 240, .94);
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      box-shadow: 0 2px 12px rgba(36, 33, 29, .06);
+    }
+
+    .side-title {
+      margin: 0 0 8px;
+      color: var(--accent);
+      font-weight: 800;
+      font-size: 15px;
+      line-height: 1.3;
+    }
+
+    .side-group-title {
+      margin: 13px 0 5px;
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .08em;
+    }
+
+    .side-link {
+      display: block;
+      margin: 4px 0;
+      padding: 6px 8px;
+      border-radius: 7px;
+      color: var(--ink);
+      font-size: 13px;
+      line-height: 1.35;
+      text-decoration: none;
+    }
+
+    .side-link:hover,
+    .side-link:focus {
+      background: var(--soft);
+      color: var(--accent);
+      outline: none;
+    }
+
+    .side-home {
+      background: #fbf3e4;
+      font-weight: 700;
+    }
+
+    .stop:target {
+      border-color: var(--accent-2);
+      outline: 3px solid rgba(31, 111, 120, .18);
+      outline-offset: 2px;
+    }
+
+
+
+    .freshness-note {
+      margin: 18px 0;
+      padding: 12px 14px;
+      border: 1px solid #c9a96b;
+      border-radius: 8px;
+      background: #fff4d7;
+      color: #4f3b12;
+      font-size: 14px;
+    }
+
+    .freshness-note strong { color: var(--accent); }
+
+    .author-box {
+      margin: 16px 0 24px;
+      padding: 14px;
+      background: #fdf7e9;
+      border: 1px solid var(--line);
+      border-left: 5px solid var(--accent-2);
+      border-radius: 8px;
+    }
+
+    .author-box h2,
+    .route-tools h2 {
+      margin-top: 0;
+      border-top: 0;
+      padding-top: 0;
+    }
+
+    .search-panel {
+      margin-bottom: 12px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .search-label {
+      display: block;
+      margin: 0 0 6px;
+      color: var(--accent);
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    .search-row {
+      display: flex;
+      gap: 6px;
+    }
+
+    .search-input {
+      width: 100%;
+      min-height: 36px;
+      padding: 7px 9px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fffdf7;
+      color: var(--ink);
+      font: inherit;
+      font-size: 14px;
+    }
+
+    .search-input:focus {
+      outline: 3px solid rgba(31, 111, 120, .16);
+      border-color: var(--accent-2);
+    }
+
+    .mini-btn,
+    .mode-btn,
+    .select-control {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fbf3e4;
+      color: var(--ink);
+      cursor: pointer;
+      font: inherit;
+    }
+
+    .mini-btn {
+      min-width: 36px;
+      padding: 6px 8px;
+      font-size: 13px;
+      line-height: 1;
+    }
+
+    .search-actions {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: 7px;
+    }
+
+    .search-count {
+      flex: 1;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.35;
+    }
+
+    .search-results {
+      display: grid;
+      gap: 5px;
+      max-height: 230px;
+      overflow: auto;
+      margin-top: 8px;
+    }
+
+    .result-link {
+      display: block;
+      padding: 7px 8px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fffaf0;
+      color: var(--ink);
+      font-size: 12px;
+      line-height: 1.45;
+      text-decoration: none;
+    }
+
+    .result-link:hover,
+    .result-link:focus {
+      background: var(--soft);
+      color: var(--accent);
+      outline: none;
+    }
+
+    .route-tools {
+      margin: 18px 0 24px;
+      padding: 14px;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 10px;
+    }
+
+    .tool-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      align-items: center;
+      margin: 10px 0;
+    }
+
+    .mode-btn {
+      padding: 7px 10px;
+      font-size: 13px;
+    }
+
+    .mode-btn.active {
+      border-color: var(--accent);
+      background: var(--accent);
+      color: #fff;
+      font-weight: 700;
+    }
+
+    .select-control {
+      min-height: 34px;
+      padding: 6px 9px;
+      background: #fffdf7;
+      font-size: 13px;
+    }
+
+    .tool-hint {
+      margin: 8px 0 0;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .mode-note {
+      margin-top: 10px;
+      padding: 9px 10px;
+      border: 1px dashed var(--line);
+      border-radius: 8px;
+      background: #fbf3e4;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .source-links {
+      margin-top: 14px;
+      padding: 10px 12px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fbf3e4;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .source-links strong {
+      color: var(--accent);
+    }
+
+    .source-links ul {
+      margin: 6px 0 0;
+      padding-left: 18px;
+    }
+
+    .source-links li { margin: 2px 0; }
+
+    .quick-read {
+      margin: 10px 0 12px;
+      padding: 9px 11px;
+      border-left: 4px solid var(--accent-2);
+      border-radius: 7px;
+      background: #eef5f2;
+      color: #24443e;
+      font-size: 14px;
+    }
+
+    .requirements-grid {
+      display: grid;
+      gap: 10px;
+      margin-top: 12px;
+    }
+
+    .requirement-card {
+      padding: 12px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fbf3e4;
+    }
+
+    .requirement-card h3 {
+      margin-bottom: 6px;
+      color: var(--accent);
+      font-size: 16px;
+    }
+
+    .audience-list {
+      display: grid;
+      gap: 8px;
+      margin: 10px 0 0;
+    }
+
+    .audience-item {
+      padding: 9px 10px;
+      border-radius: 8px;
+      background: #fffaf0;
+      border: 1px solid var(--line);
+    }
+
+    .audience-item strong {
+      color: var(--accent-2);
+    }
+
+    .principle-list {
+      margin-top: 8px;
+      padding-left: 18px;
+    }
+
+    .stop.hidden-by-filter,
+    .route-block.hidden-by-filter,
+    section.hidden-by-filter {
+      display: none !important;
+    }
+
+    .stop.is-focused {
+      border-color: var(--accent-2);
+      outline: 3px solid rgba(31, 111, 120, .18);
+      outline-offset: 2px;
+    }
+
+    mark.search-mark {
+      padding: 0 .12em;
+      border-radius: 3px;
+      background: #ffe08a;
+      color: #2b2118;
+    }
+
+    .stop-meta-badge {
+      display: inline-block;
+      margin: 2px 5px 4px 0;
+      padding: 2px 7px;
+      border-radius: 999px;
+      background: #e8efe7;
+      color: #405c43;
+      font-size: 11px;
+    }
+
+    @media (max-width: 1060px) {
+      .search-panel {
+        margin-bottom: 9px;
+        padding-bottom: 9px;
+      }
+
+      .search-results {
+        max-height: 140px;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 560px) {
+      .search-results {
+        grid-template-columns: 1fr;
+      }
+
+      .tool-row {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .mode-btn,
+      .select-control {
+        width: 100%;
+      }
+    }
+
+    @media (max-width: 1060px) {
+      .page-layout {
+        display: block;
+        max-width: 880px;
+        padding: 0 14px 48px;
+      }
+
+      .page-layout > main {
+        padding: 0;
+      }
+
+      .side-nav {
+        z-index: 20;
+        top: 0;
+        max-height: none;
+        margin: 0 -14px 18px;
+        padding: 10px 14px;
+        border-left: 0;
+        border-right: 0;
+        border-radius: 0;
+        box-shadow: 0 2px 10px rgba(36, 33, 29, .08);
+      }
+
+      .side-nav-inner {
+        display: flex;
+        gap: 8px;
+        overflow-x: auto;
+        padding-bottom: 2px;
+        scrollbar-width: none;
+      }
+
+      .side-nav-inner::-webkit-scrollbar {
+        display: none;
+      }
+
+      .side-title {
+        flex: 0 0 auto;
+        margin: 0;
+        padding: 7px 10px;
+        border-radius: 999px;
+        background: var(--accent);
+        color: #fff;
+        white-space: nowrap;
+      }
+
+      .side-group-title {
+        display: none;
+      }
+
+      .side-link {
+        flex: 0 0 auto;
+        margin: 0;
+        padding: 7px 10px;
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        background: #fbf3e4;
+        white-space: nowrap;
+      }
+
+      section,
+      .stop {
+        scroll-margin-top: 76px;
+      }
+    }
+
+    @media (min-width: 760px) {
+      header { padding: 38px 28px 24px; }
+      .toc { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .stop { padding: 20px; }
+      .requirements-grid,
+      .audience-list {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+  </style>
+</head>
+<body>
+  <header id="top">
+    <main>
+      <h1>汉口近代建筑扫街口袋手册</h1>
+      <p class="subtitle">水塔街过早出发，经江汉路、沿江大道、黎黄陂路、鄱阳街、洞庭街，到平和打包厂与咸安坊一带。适合边走边读，不追求把所有馆都进完。</p>
+      <div class="meta">
+        <span class="pill">执行日：2026-06-28 周日</span>
+        <span class="pill">起点：武汉市第一医院附近酒店</span>
+        <span class="pill">主题：老汉口商业、租界、银行、洋行、里份</span>
+        <span class="pill">资料状态：2026年6月整理，开放/预约可能变化</span>
+        <span class="pill">属性：个人发烧用户贡献，不代表机构</span>
+        <span class="pill">建议：16:30 前收线，回酒店休息后去光谷</span>
+      </div>
+    </main>
+  </header>
+
+  <div class="page-layout">
+  <aside class="side-nav" aria-label="景点快速跳转与地点搜索">
+    <div class="search-panel" role="search">
+      <label class="search-label" for="site-search">地点搜索</label>
+      <div class="search-row">
+        <input class="search-input" id="site-search" type="search" placeholder="搜景点、银行、俄国、教堂、预约…" autocomplete="off">
+        <button class="mini-btn" type="button" id="clear-search" aria-label="清除搜索">×</button>
+      </div>
+      <div class="search-actions">
+        <span class="search-count" id="search-count">输入关键词快速定位地点</span>
+        <button class="mini-btn" type="button" id="prev-result" aria-label="上一个结果">↑</button>
+        <button class="mini-btn" type="button" id="next-result" aria-label="下一个结果">↓</button>
+      </div>
+      <div class="search-results" id="search-results" aria-live="polite"></div>
+    </div>
+    <div class="side-nav-inner">
+      <p class="side-title">景点快速跳转</p>
+      <a class="side-link side-home" href="#top">↑ 回到顶部</a>
+      <a class="side-link side-home" href="#requirements">需求整理</a>
+      <p class="side-group-title">上午</p>
+      <a class="side-link" href="#stop-01">1 汉口水塔</a>
+      <a class="side-link" href="#stop-02">2 水塔街与前进五路过早</a>
+      <a class="side-link" href="#stop-03">3 大清银行旧址 / 中央信托局旧址</a>
+      <a class="side-link" href="#stop-04">4 广东银行旧址</a>
+      <a class="side-link" href="#stop-05">5 上海商业储蓄银行旧址与上海邨</a>
+      <a class="side-link" href="#stop-06">6 上海路天主堂</a>
+      <a class="side-link" href="#stop-07">7 四明银行旧址</a>
+      <a class="side-link" href="#stop-08">8 中国实业银行旧址</a>
+      <a class="side-link" href="#stop-09">9 台湾银行旧址</a>
+      <a class="side-link" href="#stop-10">10 江汉关与江汉关博物馆</a>
+      <p class="side-group-title">沿江</p>
+      <a class="side-link" href="#stop-11">11 横滨正金银行旧址</a>
+      <a class="side-link" href="#stop-12">12 花旗银行旧址</a>
+      <a class="side-link" href="#stop-13">13 汇丰银行旧址</a>
+      <a class="side-link" href="#stop-14">14 新泰洋行旧址</a>
+      <a class="side-link" href="#stop-15">15 宋庆龄汉口旧居 / 华俄道胜银行旧址</a>
+      <a class="side-link" href="#stop-16">16 美国领事馆旧址</a>
+      <a class="side-link" href="#stop-17">17 法国东方汇理银行旧址</a>
+      <a class="side-link" href="#stop-18">18 德国领事馆旧址</a>
+      <p class="side-group-title">街区</p>
+      <a class="side-link" href="#stop-19">19 泰兴里与同兴里</a>
+      <a class="side-link" href="#stop-20">20 八七会议会址纪念馆</a>
+      <a class="side-link" href="#stop-21">21 珞珈山街住宅群与洛园</a>
+      <a class="side-link" href="#stop-21a">21A 武汉警察博物馆</a>
+      <a class="side-link" href="#stop-21b">21B 圣母无原罪堂</a>
+      <a class="side-link" href="#stop-22">22 巴公房子</a>
+      <a class="side-link" href="#stop-23">23 詹天佑故居博物馆</a>
+      <a class="side-link" href="#stop-24">24 平和打包厂</a>
+      <a class="side-link" href="#stop-25">25 景明洋行大楼</a>
+      <a class="side-link" href="#stop-26">26 咸安坊</a>
+      <a class="side-link" href="#stop-27">27 武汉美术馆汉口馆</a>
+      <p class="side-group-title">可选</p>
+      <a class="side-link" href="#optional-gude">古德寺</a>
+      <a class="side-link" href="#optional-orthodox">汉口东正教堂旧址</a>
+      <a class="side-link" href="#optional-river">江滩深走</a>
+    </div>
+  </aside>
+
+  <main class="content-main">
+    <div class="notice">
+      本手册把“可外观看”的建筑和“可入内参观”的馆分开写。老建筑常被银行、机关、酒店、商铺使用，开放情况会变；遇到保安、办公区、住户空间，请以现场提示为准，不强行进入，不拍敏感办公区。
+    </div>
+
+    <div class="freshness-note">
+      <strong>开放/预约资料提示：</strong>本页涉及开放时间、预约方式、公众号、场馆运营状态等信息，均按 <strong>2026年6月</strong> 可查资料整理，可能随节假日、修缮、临展、单位办公或宗教活动变化。出发前请以官网、官方公众号、预约小程序或现场公告为准。
+    </div>
+
+    <section class="author-box" id="about-author">
+      <h2>作者身份与使用说明</h2>
+      <p>整理/维护：Eason。本文是个人发烧用户整理的汉口近代建筑现场手册，目的是把视频路线、建筑资料、官方开放信息和现场观察方式整理成一个普通游客也能边走边用的网页。它不是官方导览，也不代表任何机构或 UP 主立场。</p>
+      <p>核心路线参考 B 站 UP 主“艺术与设计史”的“汉口两万步”系列；作者补充了现场可用的检索、路线模式、资料链接和开放状态提示，希望对粉丝复走路线、普通大众参观游览都有帮助。</p>
+      <p>本站的粉丝向，指的是对路线研究、建筑观察方法和资料工作的致敬，不是饭圈化表达。默认读者是理性粉丝、建筑爱好者和普通游客的交集：愿意看资料，但也需要清楚知道怎么走、看哪里、何时该停。</p>
+    </section>
+
+    <section class="route-block" id="requirements">
+      <h2>需求整理</h2>
+      <p>这个网页要同时满足两类人：一类是看过“汉口两万步”的粉丝，想按 UP 主路线复走并补足资料；另一类是普通游客，只想用更轻松的方式理解汉口老建筑。页面因此采用“粉丝来源清晰、普通游客优先可用”的原则。</p>
+
+      <div class="audience-list">
+        <div class="audience-item">
+          <strong>普通游客</strong>
+          <p>需要少做功课也能上手：知道精华路线、停留时间、可否入内、现场看什么，以及什么时候该删点休息。</p>
+        </div>
+        <div class="audience-item">
+          <strong>粉丝复走</strong>
+          <p>需要能对应视频集数、路线顺序和关键观察点，保留“艺术与设计史”的问题意识，但不把视频逐字稿照搬成网页。</p>
+        </div>
+        <div class="audience-item">
+          <strong>建筑兴趣用户</strong>
+          <p>需要按银行、教堂、洋行、里份、工业建筑等类型检索，方便横向比较风格、功能和历史背景。</p>
+        </div>
+        <div class="audience-item">
+          <strong>现场使用者</strong>
+          <p>需要手机上快速搜索、跳转、筛选，文字短段落化，重点用“现场怎么看”而不是长篇论文式叙述。</p>
+        </div>
+      </div>
+
+      <div class="requirements-grid">
+        <div class="requirement-card">
+          <h3>内容目标</h3>
+          <ul class="compact">
+            <li>每个站点至少回答：它是什么、为什么重要、现场看哪里、是否适合入内。</li>
+            <li>历史叙述优先使用公开资料、研究书目和文保信息校验。</li>
+            <li>UP 主观点可作为观察线索，但要和官方/书籍资料区分。</li>
+          </ul>
+        </div>
+        <div class="requirement-card">
+          <h3>体验目标</h3>
+          <ul class="compact">
+            <li>第一屏让人知道这是可现场使用的导览，不只是粉丝资料库。</li>
+            <li>支持完整路线、精华路线、跟着视频走、按建筑类型四种选择路线方式。</li>
+            <li>保留搜索和侧边快速跳转，方便在街上临时查点。</li>
+          </ul>
+        </div>
+        <div class="requirement-card">
+          <h3>引用边界</h3>
+          <ul class="compact">
+            <li>明确注明路线参考“艺术与设计史”的“汉口两万步”系列。</li>
+            <li>不冒充 UP 主原作、不代表官方导览、不替代现场公告。</li>
+            <li>后续若发布，应保留视频来源、书目来源和资料更新时间。</li>
+          </ul>
+        </div>
+        <div class="requirement-card">
+          <h3>现场原则</h3>
+          <ul class="compact">
+            <li>不打扰住户、办公机构、宗教活动和场馆秩序。</li>
+            <li>遇到禁止拍照、预约、闭馆、办公区提示，以现场为准。</li>
+            <li>路线服务旅行体验，同行者不感兴趣时应切换到吃喝、休息或短线模式。</li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="mode-note">选择路线建议：第一次来或带朋友，点“精华路线”；想复走视频，点“跟着视频走”；只想看某类建筑，点“按建筑类型”；做资料整理或深度扫街，再使用“完整路线”。</p>
+    </section>
+
+    <section class="route-tools" id="route-tools" aria-label="路线模式与筛选">
+      <h2>搜索与路线模式</h2>
+      <div class="tool-row" role="group" aria-label="路线模式">
+        <button class="mode-btn active" type="button" data-mode="all">完整路线</button>
+        <button class="mode-btn" type="button" data-mode="essential">精华路线</button>
+        <button class="mode-btn" type="button" data-mode="video">跟着视频走</button>
+        <button class="mode-btn" type="button" data-mode="type">按建筑类型</button>
+      </div>
+      <div class="tool-row">
+        <select class="select-control" id="episode-filter" aria-label="选择视频集数">
+          <option value="">视频模式：全部集数</option>
+          <option value="1">第1集：江汉路建筑群</option>
+          <option value="2">第2集：沿江大道建筑群</option>
+          <option value="3">第3集：胜利街到黎黄陂路</option>
+          <option value="4">第4集：巴公房子到武汉美术馆</option>
+        </select>
+        <select class="select-control" id="type-filter" aria-label="选择建筑类型">
+          <option value="">类型模式：全部类型</option>
+          <option value="bank">银行金融</option>
+          <option value="church">教堂宗教</option>
+          <option value="company">洋行商业</option>
+          <option value="consulate">领事馆/租界治理</option>
+          <option value="lane">里份住宅</option>
+          <option value="museum">博物馆/纪念馆</option>
+          <option value="industrial">工业建筑</option>
+          <option value="food">过早/休息</option>
+        </select>
+      </div>
+      <p class="tool-hint">现场建议：不知道叫什么就搜关键词，例如“俄国”“哥特”“银行”“预约”“教堂”“巴诺夫”。</p>
+      <div class="mode-note" id="mode-note">当前为完整路线：保留全部站点与可选点，适合出发前阅读或慢慢走。</div>
+    </section>
+
+    <section class="route-block">
+      <h2>资料底本与使用边界</h2>
+      <p>这份手册的路线骨架，采用你给的 B 站 UP 主“艺术与设计史”的“汉口两万步”系列：第1集江汉路近现代建筑群，第2集沿江大道近现代建筑群，第3集胜利街到黎黄陂路，第4集巴公房子到武汉美术馆。它的价值在于把单点建筑串成“老汉口如何成为近代商业城市”的连续叙事。</p>
+      <p>建筑说明优先吸收 UP 主的现场观察和他提到的参考体系，尤其是《湖北古建筑地图》和《汉口原租界建筑装饰》。你口述的“湖北原租界建筑装饰”，我查到公开书目信息更常见的题名是《汉口原租界建筑装饰》，后续做网页时建议按这个书名核对。</p>
+      <p>官方/机构资料主要用于校验建筑名称、文保身份、开放时间和现状；第三方平台只作为辅助判断“现在能不能进、现场体验如何”，不作为历史细节的核心依据。涉及开放、预约、闭馆日的信息均按2026年6月资料标注，后续可能过时，请自行查阅。</p>
+    </section>
+
+    <nav class="toc" aria-label="目录">
+      <a href="#about-author">作者与使用说明</a>
+      <a href="#requirements">需求整理</a>
+      <a href="#route-tools">搜索与路线模式</a>
+      <a href="#morning">上午：水塔街到江汉关</a>
+      <a href="#riverfront">中午后：沿江大道建筑群</a>
+      <a href="#neighborhood">下午：黎黄陂路、鄱阳街、洞庭街</a>
+      <a href="#optional">可选与跳过点</a>
+      <a href="#sources">资料来源</a>
+    </nav>
+
+    <section class="route-block">
+      <h2>一日节奏</h2>
+      <p><strong>08:30-09:30</strong> 水塔街过早，顺便看汉口水塔。</p>
+      <p><strong>09:30-11:30</strong> 江汉路近现代建筑群，主线是中资银行、商业住宅和江汉关。</p>
+      <p><strong>11:30-12:30</strong> 江汉关博物馆，想进就进；不进也可以只看外立面和江边位置。</p>
+      <p><strong>12:30-13:30</strong> 午饭、咖啡、降温。武汉夏天别跟自己较劲。</p>
+      <p><strong>13:30-15:00</strong> 沿江大道：横滨正金、花旗、汇丰、新泰洋行、宋庆龄旧居、领事馆线。</p>
+      <p><strong>15:00-16:30</strong> 黎黄陂路、鄱阳街、洞庭街：泰兴里/同兴里、武汉警察博物馆、圣母无原罪堂、八七会议、巴公房子、平和打包厂。若体力不够，警察博物馆与圣母无原罪堂可二选一。</p>
+    </section>
+
+    <section id="morning">
+      <h2>上午：水塔街到江汉关</h2>
+
+      <article class="stop" id="stop-01">
+        <div class="stop-head">
+          <span class="num">1</span>
+          <div>
+            <h3>汉口水塔</h3>
+            <div class="tags">
+              <span class="tag green">外观优先</span>
+              <span class="tag">市政现代化</span>
+              <span class="tag">供水与消防</span>
+            </div>
+          </div>
+        </div>
+        <p class="section-title">它是什么</p>
+        <p>汉口水塔位于中山大道与前进五路一带，是既济水电公司的配套设施。它不只是“水塔街的招牌”，更是汉口从传统商埠走向现代城市的早期市政装置：供自来水、调节水压，也兼作消防瞭望和报警设施。</p>
+        <p class="section-title">历史故事</p>
+        <p>清末汉口人口密集，但城市用水很不稳定，居民多依赖江河、井水和挑水。1906年前后，商人宋炜臣等推动筹建汉镇既济水电公司；1909年宗关水厂与水塔投入使用，汉口开始进入自来水时代。水塔上部曾设巨型水柜，下部可办公、放置设备；发生火警时，瞭望人员通过敲钟次数传递失火方位，让消防队更快到场。</p>
+        <p class="section-title">现场怎么看</p>
+        <ul>
+          <li>先看整体：八角形红砖塔身，不是纯装饰，而是服务水柜与结构的实用形体。</li>
+          <li>再看顶部：高处既是水压系统，也是消防瞭望点，像一个早期城市监控塔。</li>
+          <li>最后看位置：它今天嵌在小吃街里，反而更能说明老汉口市政设施怎样融入日常生活。</li>
+        </ul>
+        <p class="section-title">现状提示</p>
+        <p>官方在2025年报道其经保护性修缮后转型为数字空间体验馆；2026年6月资料仍建议按“外观最稳、入内看现场”的原则处理，体验馆运营可能分阶段调整。</p>
+        <div class="source-links"><strong>可查资料：</strong><ul><li><a href="https://www.wuhan.gov.cn/sy/whyw/202505/t20250522_2584981.shtml">武汉市人民政府：汉口水塔焕新报道</a></li></ul><p>开放/体验馆信息为2026年6月可查资料，可能随试运营、维护调整。</p></div>
+      </article>
+
+      <article class="stop" id="stop-02">
+        <div class="stop-head">
+          <span class="num">2</span>
+          <div>
+            <h3>水塔街与前进五路过早</h3>
+            <div class="tags">
+              <span class="tag green">吃饭点</span>
+              <span class="tag">老汉口烟火</span>
+            </div>
+          </div>
+        </div>
+        <p>这不是传统意义上的“景点”，但很适合作为整条路线的入口。你们从这里开始，会先看到老汉口商业区的真实密度：早餐摊、小店、行人、骑手、游客和上班族混在一起。</p>
+        <p class="section-title">建议吃法</p>
+        <ul class="compact">
+          <li>两个人分食三到四样即可：热干面、豆皮、面窝、糊米酒、鸡腿、酥饺任选。</li>
+          <li>不要吃太撑，后面要走很多路；水和纸巾提前备好。</li>
+        </ul>
+      </article>
+
+      <article class="stop" id="stop-03">
+        <div class="stop-head">
+          <span class="num">3</span>
+          <div>
+            <h3>大清银行旧址 / 中央信托局旧址</h3>
+            <div class="tags">
+              <span class="tag green">外观</span>
+              <span class="tag">中资金融街开场</span>
+            </div>
+          </div>
+        </div>
+        <p>从水塔往江汉路方向走，银行建筑开始密集出现。大清银行旧址体现较早的古典式银行立面：底部稳重，中段用柱廊制造权威感。旁边中央信托局旧址则更偏装饰艺术风格，能看到竖向线条、折线图案、耐火砖和绿色饰板的组合。</p>
+        <p class="section-title">现场怎么看</p>
+        <ul>
+          <li>把大清银行当作“传统银行权威感”的样本：柱、台阶、对称立面。</li>
+          <li>把中央信托局当作“30年代摩登感”的样本：少一点古典柱，多一点几何线。</li>
+        </ul>
+      </article>
+
+      <article class="stop" id="stop-04">
+        <div class="stop-head">
+          <span class="num">4</span>
+          <div>
+            <h3>广东银行旧址</h3>
+            <div class="tags">
+              <span class="tag green">可尝试看楼梯间</span>
+              <span class="tag">帕拉第奥母题</span>
+              <span class="tag">侨资银行</span>
+            </div>
+          </div>
+        </div>
+        <p class="section-title">它是什么</p>
+        <p>广东银行位于扬子街一带，建于1923年，为钢筋混凝土结构，常被视为汉口近代银行建筑中很有辨识度的一座。它背后连接的是华侨资本、香港注册银行和汉口商业网络。</p>
+        <p class="section-title">历史故事</p>
+        <p>广东银行由旅美华侨陆蓬山等人在1912年以股份有限公司形式在香港注册成立，曾在广州、上海、汉口、旧金山等地设分支行。它在中国和美国都有业务网络，因此既带着中国银行的身份，又带着跨国资本流动的影子。</p>
+        <p class="section-title">现场怎么看</p>
+        <ul>
+          <li>主入口的半圆穹顶是重点，像把古罗马拱券、立柱和穹顶浓缩成一个舞台入口。</li>
+          <li>楼梯间值得看：扶手不是一条直线，而是带起伏和转折的线束，细节比外立面更灵。</li>
+          <li>如果里面仍有住户或办公使用，保持安静，快速看，不拍人。</li>
+        </ul>
+        <div class="source-links"><strong>可查资料：</strong><ul><li><a href="https://www.whcbs.com/Upload/BookReadFile/202002/815f04fc613b45f399c1d43f7777afc5/ops/chapter023.html">武汉出版社资料：广东银行</a></li></ul></div>
+      </article>
+
+      <article class="stop" id="stop-05">
+        <div class="stop-head">
+          <span class="num">5</span>
+          <div>
+            <h3>上海商业储蓄银行旧址与上海邨</h3>
+            <div class="tags">
+              <span class="tag green">外观+里份</span>
+              <span class="tag">银行职员宿舍</span>
+              <span class="tag">里份住宅</span>
+            </div>
+          </div>
+        </div>
+        <p>这里很适合理解“金融建筑不只是一栋银行”。银行旁的上海邨曾是职员宿舍，属于汉口高等里份住宅的一类。里份可以粗略理解成近代汉口的商品房小区：有牌楼、有门洞、有天井，有时一楼临街商业、楼上居住。</p>
+        <p class="section-title">现场怎么看</p>
+        <ul>
+          <li>看银行与住宅的连带关系：金融机构不只是办公，也生产了职员生活区。</li>
+          <li>看一楼小店与楼上住宅的断裂：一楼常被更新成咖啡、服装、文艺店，楼上可能仍然老旧。</li>
+          <li>进里份时放低声音；门洞、天井、后天井比店招更值得看。</li>
+        </ul>
+      </article>
+
+      <article class="stop" id="stop-06">
+        <div class="stop-head">
+          <span class="num">6</span>
+          <div>
+            <h3>上海路天主堂</h3>
+            <div class="tags">
+              <span class="tag">可入内视现场</span>
+              <span class="tag">宗教空间</span>
+              <span class="tag">近代医疗关联</span>
+            </div>
+          </div>
+        </div>
+        <p>上海路天主堂是汉口重要的天主教建筑，旁边医院系统与教会医疗有关。它的意义不只在立面，而在内部空间：高大的中殿、侧廊、长椅和拱券让人立刻感到宗教建筑对身体尺度的压迫与安静。</p>
+        <p class="section-title">现场怎么看</p>
+        <ul>
+          <li>如果开放，进去坐两三分钟，感受“街市喧闹”到“室内静默”的突然切换。</li>
+          <li>注意别在弥撒或宗教活动中打扰他人；拍照先看现场规定。</li>
+        </ul>
+      </article>
+
+      <article class="stop" id="stop-07">
+        <div class="stop-head">
+          <span class="num">7</span>
+          <div>
+            <h3>四明银行旧址</h3>
+            <div class="tags">
+              <span class="tag green">外观</span>
+              <span class="tag">卢镛标</span>
+              <span class="tag">装饰艺术</span>
+            </div>
+          </div>
+        </div>
+        <p>四明银行旧址是理解汉口近代建筑从古典复兴转向摩登风格的好样本。它由中国建筑师卢镛标设计，1936年竣工，是中国设计师在汉口设计的早期钢筋混凝土银行建筑之一。</p>
+        <p class="section-title">现场怎么看</p>
+        <ul>
+          <li>看竖线条和几何装饰：它不像早期银行那样强调大柱廊，而是更现代、更摩登。</li>
+          <li>和前面的广东银行对比：一个是古典入口的戏剧性，一个是竖向线条的现代速度感。</li>
+        </ul>
+      </article>
+
+      <article class="stop" id="stop-08">
+        <div class="stop-head">
+          <span class="num">8</span>
+          <div>
+            <h3>中国实业银行旧址</h3>
+            <div class="tags">
+              <span class="tag green">外观</span>
+              <span class="tag">昔日武汉高楼</span>
+              <span class="tag">现代感</span>
+            </div>
+          </div>
+        </div>
+        <p class="section-title">它是什么</p>
+        <p>中国实业银行大楼建于1930年代中期，曾是当年武汉最高建筑之一。今天你们已经在肥肥虾庄吃过饭，反而更容易把它从“餐饮店外壳”重新看成一栋金融高楼。</p>
+        <p class="section-title">历史故事</p>
+        <p>中国实业银行创设于1919年，服务实业金融。汉口分行设立后，最终在江汉路一带留下这栋摩登高楼。UP 主强调得很对：它的现代感很强，几何装饰进一步减少，只剩平整墙面、长窗和转角高塔，像是汉口高层商业建筑继续发展的前夜。1938年武汉沦陷，这种建设节奏被打断。</p>
+        <p class="section-title">现场怎么看</p>
+        <ul>
+          <li>从街角后退一点看塔楼，感受“银行想成为城市天际线”的野心。</li>
+          <li>看入口台阶和商业使用之间的矛盾：今天做餐饮，台阶反而会影响客流。</li>
+        </ul>
+      </article>
+
+      <article class="stop" id="stop-09">
+        <div class="stop-head">
+          <span class="num">9</span>
+          <div>
+            <h3>台湾银行旧址</h3>
+            <div class="tags">
+              <span class="tag green">外观+商铺</span>
+              <span class="tag">日资银行</span>
+              <span class="tag">柱廊</span>
+            </div>
+          </div>
+        </div>
+        <p>台湾银行旧址是日资金融机构在汉口留下的建筑之一。可重点看三、四层的通高双柱外廊，以及楼顶两端原雕塑底座。它适合作为中国实业银行的对照：同在商业核心区，但权力来源、建筑表情、历史语境都不同。</p>
+      </article>
+
+      <article class="stop" id="stop-10">
+        <div class="stop-head">
+          <span class="num">10</span>
+          <div>
+            <h3>江汉关与江汉关博物馆</h3>
+            <div class="tags">
+              <span class="tag green">强烈建议入内</span>
+              <span class="tag">海关权力</span>
+              <span class="tag">东方芝加哥</span>
+            </div>
+          </div>
+        </div>
+        <p class="section-title">它是什么</p>
+        <p>江汉关位于江汉路口和沿江大道交汇处，是汉口近代城市的标志性建筑。它不是单纯的钟楼，而是海关制度、通商贸易、航运税收和租界秩序的建筑化表达。</p>
+        <p class="section-title">历史故事</p>
+        <p>汉口开埠后，江汉关承担进出口货物征税以及航道、港务、水文、检疫等职能。现存大楼于1920年代建成，主楼和钟楼组合成当时汉口最醒目的高点之一。2015年江汉关博物馆开放后，建筑本身也成为展品。</p>
+        <p class="section-title">现场怎么看</p>
+        <ul>
+          <li>看位置：它不是缩在街里，而是站在江边突出部，面对沿江大道，像在俯瞰整条金融与洋行街。</li>
+          <li>看柱廊：西、北、东三面巨柱环绕，显示海关制度的威严。</li>
+          <li>入内看壁炉、窗把手、办公空间复原，重点不是展柜数量，而是“洋员办公室”和“中国税务员职位”的空间差异。</li>
+        </ul>
+        <p class="section-title">开放提示</p>
+        <p>通常周二至周日9:00-17:00开放，16:00停止入馆，周一闭馆，免费但可能需要预约。明天是周日，理论上可安排；以现场和官方预约为准。</p>
+        <div class="source-links"><strong>可查资料：</strong><ul><li><a href="https://www.jhgmuseum.com/section-1.html">江汉关博物馆官网：历史足迹</a></li><li><a href="https://www.wuhan.gov.cn/sy/tswh/202211/t20221105_2087541.shtml">武汉市人民政府：江汉关100岁依然鲜活</a></li></ul><p>开放/预约信息为2026年6月资料，入馆前请查官网或预约平台。</p></div>
+      </article>
+    </section>
+
+    <section id="riverfront">
+      <h2>中午后：沿江大道建筑群</h2>
+
+      <article class="stop" id="stop-11">
+        <div class="stop-head">
+          <span class="num">11</span>
+          <div>
+            <h3>横滨正金银行旧址</h3>
+            <div class="tags">
+              <span class="tag green">外观</span>
+              <span class="tag">日本金融机构</span>
+              <span class="tag">古典柱廊</span>
+            </div>
+          </div>
+        </div>
+        <p>横滨正金银行是日本对外贸易金融系统的重要机构，其汉口大楼在1921年前后重建。建筑最强的观感是“堡垒式古典”：转角入口被切出大门，两面临街立面都有高大的爱奥尼亚双柱柱廊，柱子挡住窗户，强调坚固、秩序和财力。</p>
+        <p class="section-title">现场怎么看</p>
+        <ul>
+          <li>站在南京路口看转角，感受它如何把路口变成主入口。</li>
+          <li>抬头看柱廊后的高窗：它不是完全开放，而是故意让柱子压住视线。</li>
+          <li>细节可找菊花等日本元素，但不必强求，许多装饰藏得很深。</li>
+        </ul>
+        <div class="source-links"><strong>可查资料：</strong><ul><li><a href="https://www.whcbs.com/Upload/BookReadFile/202002/815f04fc613b45f399c1d43f7777afc5/ops/chapter008.html">武汉出版社资料：日本横滨正金银行</a></li><li><a href="https://design.citic/portal/article/index/id/766.html">中信建筑设计研究总院：横滨正金银行修缮项目</a></li></ul></div>
+      </article>
+
+      <article class="stop" id="stop-12">
+        <div class="stop-head">
+          <span class="num">12</span>
+          <div>
+            <h3>花旗银行旧址</h3>
+            <div class="tags">
+              <span class="tag green">外观</span>
+              <span class="tag">美国银行</span>
+              <span class="tag">亨利·墨菲</span>
+            </div>
+          </div>
+        </div>
+        <p>花旗银行旧址建于1919-1922年，由美国建筑师 Henry Murphy 设计。它和汇丰隔青岛路相望，是汉口沿江大道金融立面的核心节点之一。</p>
+        <p class="section-title">现场怎么看</p>
+        <ul>
+          <li>看二至四层贯通的六根大圆柱，柱廊让银行看起来像一座神庙。</li>
+          <li>找楼顶鹰徽元素：它把美国国家象征带入银行立面。</li>
+          <li>和横滨正金对比：同样古典，但花旗更像“展示身份”，横滨更像“展示防御”。</li>
+        </ul>
+      </article>
+
+      <article class="stop" id="stop-13">
+        <div class="stop-head">
+          <span class="num">13</span>
+          <div>
+            <h3>汇丰银行旧址</h3>
+            <div class="tags">
+              <span class="tag">可尝试入内</span>
+              <span class="tag">英资银行</span>
+              <span class="tag">体量最大</span>
+            </div>
+          </div>
+        </div>
+        <p class="section-title">它是什么</p>
+        <p>汇丰汉口分行开设很早，现存大楼于1913年后重建，1920年前后竣工，是汉口租界中体量和室内质感都非常突出的银行建筑。现建筑由银行机构使用。</p>
+        <p class="section-title">现场怎么看</p>
+        <ul>
+          <li>先看退让出的院子：多数银行贴街开门，汇丰把建筑往后退，门前形成更强的仪式空间。</li>
+          <li>看正门石狮、盾徽、花环、狮头浮雕，都是“资金安全、帝国信用、商业权力”的视觉语言。</li>
+          <li>如果能进大堂，重点看绿色玻璃穹顶、圆柱与纪念碑。若现场提示禁止拍照，就只看不拍。</li>
+        </ul>
+      </article>
+
+      <article class="stop" id="stop-14">
+        <div class="stop-head">
+          <span class="num">14</span>
+          <div>
+            <h3>新泰洋行旧址</h3>
+            <div class="tags">
+              <span class="tag green">外观</span>
+              <span class="tag">俄国茶商</span>
+              <span class="tag">万里茶道</span>
+            </div>
+          </div>
+        </div>
+        <p>新泰洋行背后是俄国茶商和汉口砖茶贸易。汉口曾是万里茶道的重要节点，茶叶从内地集散到汉口，再经长江、海运和陆路进入俄国市场。俄商凭加工技术、运输路线和租界特权，逐渐取代晋商在中俄茶贸中的主导地位。</p>
+        <p class="section-title">现场怎么看</p>
+        <ul>
+          <li>看转角圆弧立面和上部塔楼，建筑不像银行那样硬，而更有商业洋行气质。</li>
+          <li>从这里向江边看，想象货物从厂房、洋行、码头流向长江。</li>
+          <li>如果有余力，穿到江滩看万里茶道相关景观。</li>
+        </ul>
+      </article>
+
+      <article class="stop" id="stop-15">
+        <div class="stop-head">
+          <span class="num">15</span>
+          <div>
+            <h3>宋庆龄汉口旧居 / 华俄道胜银行旧址</h3>
+            <div class="tags">
+              <span class="tag green">建议入内</span>
+              <span class="tag">俄式外廊</span>
+              <span class="tag">1927武汉</span>
+            </div>
+          </div>
+        </div>
+        <p class="section-title">它是什么</p>
+        <p>这栋沿江建筑原为华俄道胜银行汉口分行，建于1896年前后，后因宋庆龄1927年在此居住而成为纪念馆。它把银行、俄国茶贸、国民政府迁汉、大革命时期政治风云几条线叠在一起。</p>
+        <p class="section-title">现场怎么看</p>
+        <ul>
+          <li>外观看一圈宽廊：这种殖民地外廊式建筑适应湿热气候，遮阳、通风。</li>
+          <li>入内看楼梯和室内细部，UP 主提到这里内外设计语言统一，楼梯尤其值得留意。</li>
+          <li>把它和前面的硬朗银行对比：这里没有那么“秀肌肉”，更像江边住宅和办公的混合体。</li>
+        </ul>
+        <p class="section-title">开放提示</p>
+        <p>常见信息为周二至周日开放，16:00左右停止入馆，免费参观。明天若路过时体力允许，值得进。</p>
+      </article>
+
+      <article class="stop" id="stop-16">
+        <div class="stop-head">
+          <span class="num">16</span>
+          <div>
+            <h3>美国领事馆旧址</h3>
+            <div class="tags">
+              <span class="tag green">外观</span>
+              <span class="tag">巴诺夫公馆</span>
+              <span class="tag">安妮女王复兴风格</span>
+            </div>
+          </div>
+        </div>
+        <p>这栋红砖建筑最早并非美国人修建，而是俄国茶商巴诺夫的公馆，后来成为美国领事馆旧址。巴诺夫也是巴公房子的投资者之一，所以这座建筑是你们下午看巴公房子的前奏。</p>
+        <p class="section-title">现场怎么看</p>
+        <ul>
+          <li>看清水红砖、曲线墙面、连续拱券门窗，风格比银行更生活化。</li>
+          <li>注意塔楼位置。原塔楼尖顶曾在1944年空袭中受损，后期又因办公需要改动。</li>
+        </ul>
+      </article>
+
+      <article class="stop" id="stop-17">
+        <div class="stop-head">
+          <span class="num">17</span>
+          <div>
+            <h3>法国东方汇理银行旧址</h3>
+            <div class="tags">
+              <span class="tag green">外观</span>
+              <span class="tag">法租界</span>
+              <span class="tag">砖色与装饰</span>
+            </div>
+          </div>
+        </div>
+        <p>东方汇理银行汉口分行位于法租界范围内。它比花旗、汇丰更早，1901年前后来汉口设分行，旧楼约1902年建成。建筑采用红砖清水墙、半圆拱券、壁柱和巴洛克/洛可可装饰，色彩比英国银行更活泼。</p>
+        <p class="section-title">现场怎么看</p>
+        <ul>
+          <li>看红砖、青砖、白色线脚和绿色栏杆的配色。</li>
+          <li>看一层、二层窗边柱式的变化：细部非常“法国”。</li>
+        </ul>
+        <div class="source-links"><strong>可查资料：</strong><ul><li><a href="https://www.whcbs.com/Upload/BookReadFile/202002/815f04fc613b45f399c1d43f7777afc5/ops/chapter011.html">武汉出版社资料：法国东方汇理银行</a></li></ul></div>
+      </article>
+
+      <article class="stop" id="stop-18">
+        <div class="stop-head">
+          <span class="num">18</span>
+          <div>
+            <h3>德国领事馆旧址</h3>
+            <div class="tags">
+              <span class="tag">预约制/可能不可进</span>
+              <span class="tag">市政府院内</span>
+              <span class="tag">外廊式</span>
+            </div>
+          </div>
+        </div>
+        <p>德国领事馆旧址位于沿江大道188号武汉市人民政府院内，过去长期不对外开放。2025年起有媒体报道其开始通过“武汉市民热线”微信小程序预约开放，但开放区域、预约名额和安检要求都比较严格。</p>
+        <p class="section-title">现场怎么看</p>
+        <ul>
+          <li>如果没预约，不要把它当明天的必要入内点，路口外观看即可。</li>
+          <li>看外廊式布局和庭院感：领事馆不是银行，它更像办公、会客、居住结合的外交空间。</li>
+        </ul>
+      </article>
+    </section>
+
+    <section id="neighborhood">
+      <h2>下午：黎黄陂路、鄱阳街、洞庭街</h2>
+
+      <article class="stop" id="stop-19">
+        <div class="stop-head">
+          <span class="num">19</span>
+          <div>
+            <h3>泰兴里与同兴里</h3>
+            <div class="tags">
+              <span class="tag green">里份漫游</span>
+              <span class="tag">生活尺度</span>
+              <span class="tag">门头细节</span>
+            </div>
+          </div>
+        </div>
+        <p>从沿江大道转入胜利街、鄱阳街一带，建筑叙事会从“银行和领事馆”切换到“住宅和生活”。泰兴里更宽敞，带小院，像统一规划的高级里份；同兴里巷道更窄更长，门头、户型、立面更丰富。</p>
+        <p class="section-title">现场怎么看</p>
+        <ul>
+          <li>泰兴里看楼间距和小院：它不像普通逼仄里份，更像近代中产住宅区。</li>
+          <li>同兴里看门头：方柱、花叶、山花、福字、心形阳台装饰，中西元素混搭。</li>
+          <li>看天井和后天井：这才是里份住宅的空间核心，不只是门口拍照。</li>
+        </ul>
+      </article>
+
+      <article class="stop" id="stop-20">
+        <div class="stop-head">
+          <span class="num">20</span>
+          <div>
+            <h3>八七会议会址纪念馆</h3>
+            <div class="tags">
+              <span class="tag green">建议入内</span>
+              <span class="tag">鄱阳街139号</span>
+              <span class="tag">历史转折</span>
+            </div>
+          </div>
+        </div>
+        <p class="section-title">它是什么</p>
+        <p>八七会议会址位于鄱阳街139号，原为1920年代的西式公寓“怡和新房”的一部分。1927年8月7日，中共中央在此秘密召开紧急会议，中国革命从大革命失败后的低潮转向土地革命战争的新阶段。</p>
+        <p class="section-title">现场怎么看</p>
+        <ul>
+          <li>别只记“枪杆子里出政权”，更要看它为什么选在一栋公寓里：租界、公寓、侨民住宅提供了隐蔽性。</li>
+          <li>进入二楼复原会场时，想象8月武汉酷暑、门窗紧闭、秘密开会的身体感受。</li>
+          <li>它和周边俄商公寓、巴公房子放在一起看，会发现重大历史并不总发生在宏伟建筑里。</li>
+        </ul>
+        <p class="section-title">开放提示</p>
+        <p>2026年6月可查官方信息为每日9:00-17:00开放，16:30停止入馆，每周五闭馆，免费参观；实际以官方页面和现场公告为准。</p>
+        <div class="source-links"><strong>可查资料：</strong><ul><li><a href="https://wlj.wuhan.gov.cn/zfxxgk/fdzdgknr/jgjj/zsdw/202008/t20200827_1437249.shtml">武汉市文化和旅游局：八七会议会址纪念馆</a></li></ul><p>开放时间为2026年6月可查资料，请以官方页面和现场公告为准。</p></div>
+      </article>
+
+      <article class="stop" id="stop-21">
+        <div class="stop-head">
+          <span class="num">21</span>
+          <div>
+            <h3>珞珈山街住宅群与洛园</h3>
+            <div class="tags">
+              <span class="tag green">慢走</span>
+              <span class="tag">高级住宅</span>
+              <span class="tag">闹中取静</span>
+            </div>
+          </div>
+        </div>
+        <p>珞珈山街一带是近代高级住宅区，和银行、洋行员工、侨民生活有关。今天一楼多为小店餐饮，楼上仍保留住宅气质。洛园可以作为休息点，坐十分钟，比继续硬走更值。</p>
+        <p class="section-title">现场怎么看</p>
+        <ul>
+          <li>抬头看烟囱：过去对应室内壁炉，现在多成装饰遗存。</li>
+          <li>看二楼入口、拐弯楼梯和露台，理解隐私与视野如何同时被设计出来。</li>
+        </ul>
+      </article>
+
+      <article class="stop" id="stop-21a">
+        <div class="stop-head">
+          <span class="num">21A</span>
+          <div>
+            <h3>武汉警察博物馆</h3>
+            <div class="tags">
+              <span class="tag green">建议入内</span>
+              <span class="tag">德租界</span>
+              <span class="tag">工部局</span>
+              <span class="tag">巡捕房</span>
+              <span class="tag">城市治理</span>
+            </div>
+          </div>
+        </div>
+        <p class="quick-read"><strong>30秒看懂：</strong>这里原为清末汉口德租界工部局巡捕房，不只是警察史展馆，更是老汉口租界市政、治安、消防和城市管理体系的实物遗存。</p>
+        <p class="section-title">它是什么</p>
+        <p>武汉警察博物馆位于胜利街271号。建筑前身为1909年前后建成的德租界工部局巡捕房，是老汉口租界区少见、且官方资料称为“唯一留存至今”的工部局建筑。它补上了这条路线里非常重要的一环：老汉口不仅是金融和洋行城市，也是一座被租界制度、市政机构和警务系统共同塑造的城市。</p>
+        <p class="section-title">现场怎么看</p>
+        <ul>
+          <li>看建筑外观的厚重感：墙高窗小、拱券窗、转角塔楼，比银行更像“秩序与控制”的机关建筑。</li>
+          <li>进馆后别只看装备展品，也要想象这里过去如何同时处理市政、治安、消防、巡捕办公和羁押空间。</li>
+          <li>把它和德国领事馆、法租界教堂、沿江银行放在一起看，会更容易理解“租界不是一条街，而是一套城市管理系统”。</li>
+        </ul>
+        <p class="section-title">开放提示</p>
+        <p>2026年6月可查资料显示，武汉市公安局早期报道提到该馆免费开放，可通过“武汉警察博物馆”微信公众号预约参观。预约方式和开放安排可能变化，入馆前请查官方公众号或现场公告。</p>
+        <div class="source-links"><strong>可查资料：</strong><ul><li><a href="https://gaj.wuhan.gov.cn/jmzx/jqfb/202001/t20200108_656703.html">武汉市公安局：武汉警察博物馆免费开放 可通过微信预约参观</a></li></ul><p>开放/预约信息为2026年6月资料，可能过时。</p></div>
+      </article>
+
+      <article class="stop" id="stop-21b">
+        <div class="stop-head">
+          <span class="num">21B</span>
+          <div>
+            <h3>圣母无原罪堂 / 汉口车站路法国天主堂</h3>
+            <div class="tags">
+              <span class="tag green">可入内视现场</span>
+              <span class="tag">法租界</span>
+              <span class="tag">天主教</span>
+              <span class="tag">哥特式</span>
+              <span class="tag">玫瑰窗</span>
+            </div>
+          </div>
+        </div>
+        <p class="quick-read"><strong>30秒看懂：</strong>这座小型天主堂原名圣母无原罪天主堂，又称汉口法国堂，位于原法租界，重点看尖券门、玫瑰圆窗、十字形平面和内部深蓝色星空顶。</p>
+        <p class="section-title">它是什么</p>
+        <p>圣母无原罪堂位于车站路25号，和上海路天主堂不是同一座。它原本主要服务法租界外侨，尤其是法国侨民，是原法租界宗教生活和侨民社区的重要遗存。</p>
+        <p class="section-title">现场怎么看</p>
+        <ul>
+          <li>外观看尖券门、玫瑰圆窗和尖券长窗：它的尺度不大，但哥特式气质很集中。</li>
+          <li>若允许入内，重点看深蓝色穹顶、白色星星、木构交叉拱顶和祭台方向的纵深感。</li>
+          <li>这里经历过停用、改作他用、修复再开放；看它时可以留意“宗教建筑如何被城市历史反复改写”。</li>
+        </ul>
+        <p class="section-title">开放提示</p>
+        <p>宗教场所开放和拍摄规则会受礼拜、维护、活动安排影响。2026年6月资料仅供定位与背景参考；入内请以现场提示为准，遇到弥撒或祈祷请保持安静，不开闪光灯。</p>
+        <div class="source-links"><strong>可查资料：</strong><ul><li><a href="https://www.whcbs.com/Upload/BookReadFile/202002/815f04fc613b45f399c1d43f7777afc5/ops/chapter104.html">武汉出版社资料：汉口车站路法国天主堂</a></li><li><a href="https://mzw.wuhan.gov.cn/bsfw/zjhdcscx/">武汉市民族宗教事务委员会：宗教活动场所查询</a></li></ul><p>开放/宗教活动信息为2026年6月资料，可能过时。</p></div>
+      </article>
+
+
+      <article class="stop" id="stop-22">
+        <div class="stop-head">
+          <span class="num">22</span>
+          <div>
+            <h3>巴公房子</h3>
+            <div class="tags">
+              <span class="tag green">外观重点</span>
+              <span class="tag">俄国茶商</span>
+              <span class="tag">酒店运营</span>
+            </div>
+          </div>
+        </div>
+        <p class="section-title">它是什么</p>
+        <p>巴公房子位于原俄租界一带，由俄国茶商巴诺夫投资建造，是汉口极具辨识度的近代公寓建筑。现在主体空间已作为武汉风貌巴公邸酒店运营。</p>
+        <p class="section-title">历史故事</p>
+        <p>“巴公”是人们对巴诺夫的称呼。他是汉口俄国茶商中的重要人物，和前面看到的美国领事馆旧址也有关系。巴公房子作为高档公寓，体现了俄商财富、租界住宅和城市商业的交织。</p>
+        <p class="section-title">现场怎么看</p>
+        <ul>
+          <li>从转角看尖顶和塔楼，感受它和上海武康大楼不同的俄式血统。</li>
+          <li>看大八公、小八公的体量差异：坡屋顶与平屋顶共同构成复杂平面。</li>
+          <li>酒店区域不要随意深入；外部和公共商业界面已经足够看。</li>
+        </ul>
+      </article>
+
+      <article class="stop" id="stop-23">
+        <div class="stop-head">
+          <span class="num">23</span>
+          <div>
+            <h3>詹天佑故居博物馆</h3>
+            <div class="tags">
+              <span class="tag">视开放情况</span>
+              <span class="tag">本人设计住宅</span>
+              <span class="tag">铁路史</span>
+            </div>
+          </div>
+        </div>
+        <p>詹天佑故居是汉口风貌区里很特别的名人故居：它不是短暂停留的“住过”，而是詹天佑在任汉粤川铁路会办兼总工程师期间亲自设计、实际居住的宅邸。建筑外观看似开窗很多，按理应很通透；馆内出于展陈和保护，光线体验可能和原设计不同。</p>
+        <p class="section-title">现场怎么看</p>
+        <ul>
+          <li>看木质走廊、门窗、住宅尺度，它比纪念馆叙事更能说明詹天佑作为工程师的生活状态。</li>
+          <li>如果临时闭馆或预约困难，外观看即可，把时间留给平和打包厂。</li>
+        </ul>
+      </article>
+
+      <article class="stop" id="stop-24">
+        <div class="stop-head">
+          <span class="num">24</span>
+          <div>
+            <h3>平和打包厂</h3>
+            <div class="tags">
+              <span class="tag green">建议进入</span>
+              <span class="tag">工业建筑群</span>
+              <span class="tag">文创更新</span>
+            </div>
+          </div>
+        </div>
+        <p class="section-title">它是什么</p>
+        <p>平和打包厂不同于前面单体银行和住宅，它是由多栋建筑组成的工业建筑群，曾与棉花打包、仓储、码头运输等业务有关。今天已转为文创、书店、咖啡、办公与潮流商业混合空间。</p>
+        <p class="section-title">现场怎么看</p>
+        <ul>
+          <li>看它不是“一栋楼”，而是一组可穿行的厂房、仓库、楼梯、天井和中庭。</li>
+          <li>找红砖、工字梁、锚栓、消防管道：这些工业构件比店铺陈列更有历史信息。</li>
+          <li>俄社书店一带适合休息，顺便看裸露砖墙与旧厂房改造方式。</li>
+        </ul>
+      </article>
+
+      <article class="stop" id="stop-25">
+        <div class="stop-head">
+          <span class="num">25</span>
+          <div>
+            <h3>景明洋行大楼</h3>
+            <div class="tags">
+              <span class="tag green">外观</span>
+              <span class="tag">建筑事务所</span>
+              <span class="tag">汉口风貌幕后推手</span>
+            </div>
+          </div>
+        </div>
+        <p>景明洋行不是普通一站，它像理解汉口近代建筑的“幕后名单”。许多你们一路看到的建筑，和景明洋行或其相关设计、监理网络有关。它说明汉口近代城市不是偶然长出来的，而是由建筑师、营造厂、银行、洋行共同生产出来的。</p>
+        <p class="section-title">现场怎么看</p>
+        <ul>
+          <li>看折中主义和现代倾向：底部稳，中部挺，顶部外挑，窗子变大。</li>
+          <li>如果只外观，至少抬头看高窗和锐角平面，想象过去建筑师在这里制图、办公。</li>
+        </ul>
+      </article>
+
+      <article class="stop" id="stop-26">
+        <div class="stop-head">
+          <span class="num">26</span>
+          <div>
+            <h3>咸安坊</h3>
+            <div class="tags">
+              <span class="tag green">可作为收尾</span>
+              <span class="tag">城市更新</span>
+              <span class="tag">高级里份</span>
+            </div>
+          </div>
+        </div>
+        <p>咸安坊适合作为最后一站。它已经被更新成商业街区，烟火气确实少，但这不一定是“失败”：民国时期它本来就偏高收入住宅，普通人也不是随便进来闲逛。今天的咖啡、店铺和翻修立面，是另一轮城市更新留下的状态。</p>
+        <p class="section-title">现场怎么看</p>
+        <ul>
+          <li>看Y字形路网和锐角房，而不是只看店铺。</li>
+          <li>对比泰兴里、同兴里：咸安坊更整洁、更商业，也更疏离。</li>
+          <li>如果累了，就在这里坐下，把光谷留给晚上。</li>
+        </ul>
+      </article>
+
+      <article class="stop" id="stop-27">
+        <div class="stop-head">
+          <span class="num">27</span>
+          <div>
+            <h3>武汉美术馆汉口馆</h3>
+            <div class="tags">
+              <span class="tag">可选入内</span>
+              <span class="tag">金城银行旧址</span>
+              <span class="tag">庄俊</span>
+            </div>
+          </div>
+        </div>
+        <p>武汉美术馆汉口馆由旧金城银行大楼与京城里改造而来。建筑师庄俊是中国近代建筑史上的重要人物。外观看，金城银行独占三角地块，正立面用贯通三层的巨柱形成强烈仪式感；内部已现代化改造，适合看展，不必强行当“原状建筑”理解。</p>
+        <p class="section-title">开放提示</p>
+        <p>2026年6月可查官方信息为周二至周日9:00-17:00，16:30停止入馆，周一闭馆。若当天时间紧，它可以跳过；建筑外观已经能说明很多。</p>
+        <div class="source-links"><strong>可查资料：</strong><ul><li><a href="https://wlj.wuhan.gov.cn/zfxxgk/fdzdgknr/jgjj/zsdw/202310/t20231017_2281350.shtml">武汉市文化和旅游局：武汉美术馆</a></li><li><a href="http://www.wuhanam.com/">武汉美术馆官网</a></li></ul><p>开放时间和展览安排为2026年6月可查资料，入馆前建议查官网/公众号。</p></div>
+      </article>
+    </section>
+
+    <section id="optional">
+      <h2>可选与跳过点</h2>
+
+      <article class="stop skip" id="optional-gude">
+        <h3>古德寺</h3>
+        <p>古德寺很有建筑价值，圆通宝殿融合哥特、西方古典、南传佛教、汉传佛教等多种元素。但它离你们明天汉口核心路线偏远，且游客多。你们这次主线是“汉口租界和商业城市”，明天不建议专程去。</p>
+      </article>
+
+      <article class="stop skip" id="optional-orthodox">
+        <h3>汉口东正教堂旧址</h3>
+        <p>它和俄国茶商群体、万里茶道有关，建筑尺度不大但辈分很高。不过近期第三方平台显示开放状态不稳定，明天不要把它列为必进点。若路过，可外观看绿色穹顶、洋葱头和东正教十字架。</p>
+      </article>
+
+      <article class="stop skip" id="optional-river">
+        <h3>江滩深走</h3>
+        <p>昨天你们已经完成晴川阁、南岸嘴、轮渡、武汉关码头这条江景线。明天江滩只作为沿江建筑的背景，不建议再长距离刷江滩步数。</p>
+      </article>
+    </section>
+
+    <section class="route-block">
+      <h2>明天现场阅读方式</h2>
+      <ul>
+        <li>每到一站先看“它是什么”，用30秒建立背景。</li>
+        <li>拍照前看“现场怎么看”，找一个细节：柱子、门头、穹顶、楼梯、天井、锚栓。</li>
+        <li>不要为了完整打卡牺牲体验。到15:30还没到巴公房子，就删掉詹天佑故居和美术馆。</li>
+        <li>如果天气闷热，优先保证：水塔街、广东银行、江汉关、汇丰、宋庆龄旧居、武汉警察博物馆或圣母无原罪堂二选一、八七会议、巴公房子、平和打包厂。</li>
+      </ul>
+    </section>
+
+    <section id="sources">
+      <h2>资料来源</h2>
+      <p>本手册综合了你提供的“艺术与设计史”四期逐字稿、截图路线，以及以下资料。开放时间、预约方式和运营状态按2026年6月资料标注，后续可能过时，请以当天官方/现场为准。</p>
+      <p><strong>核心路线与讲解底本</strong></p>
+      <ul class="source-list">
+        <li>艺术与设计史：《汉口两万步 ① 江汉路近现代建筑群》</li>
+        <li><a href="https://search.bilibili.com/all?keyword=%E8%89%BA%E6%9C%AF%E4%B8%8E%E8%AE%BE%E8%AE%A1%E5%8F%B2%20%E6%B1%89%E5%8F%A3%E4%B8%A4%E4%B8%87%E6%AD%A5">B站检索：艺术与设计史 汉口两万步</a></li>
+        <li>艺术与设计史：《汉口两万步 ② 沿江大道近现代建筑群》</li>
+        <li>艺术与设计史：《汉口两万步 ③ 从胜利街到黎黄陂路》</li>
+        <li>艺术与设计史：《汉口两万步 ④ 从巴公房子到武汉美术馆》</li>
+        <li>《湖北古建筑地图》，清华大学出版社，2016年版。用于理解湖北重要古建筑和近现代建筑的空间分布与基础背景。</li>
+        <li>《汉口原租界建筑装饰》，任康丽。用于理解汉口原租界建筑中的柱式、山花、门窗、雕饰、纹样和装饰风格。</li>
+      </ul>
+      <p><strong>开放状态、文保信息与补充校验</strong></p>
+      <ul class="source-list">
+        <li><a href="https://www.wuhan.gov.cn/sy/whyw/202505/t20250522_2584981.shtml">武汉市人民政府：汉口水塔焕新</a></li>
+        <li><a href="https://www.jhgmuseum.com/section-1.html">江汉关博物馆：历史足迹</a></li>
+        <li><a href="https://www.wuhan.gov.cn/sy/tswh/202211/t20221105_2087541.shtml">武汉市人民政府：江汉关100岁依然鲜活</a></li>
+        <li><a href="https://www.whcbs.com/Upload/BookReadFile/202002/815f04fc613b45f399c1d43f7777afc5/ops/chapter023.html">武汉出版社资料：广东银行</a></li>
+        <li><a href="https://www.whcbs.com/Upload/BookReadFile/202002/815f04fc613b45f399c1d43f7777afc5/ops/chapter008.html">武汉出版社资料：日本横滨正金银行</a></li>
+        <li><a href="https://www.whcbs.com/Upload/BookReadFile/202002/815f04fc613b45f399c1d43f7777afc5/ops/chapter011.html">武汉出版社资料：法国东方汇理银行</a></li>
+        <li><a href="https://wlj.wuhan.gov.cn/zfxxgk/fdzdgknr/jgjj/zsdw/202008/t20200827_1437249.shtml">武汉市文化和旅游局：八七会议会址纪念馆</a></li>
+        <li><a href="https://gaj.wuhan.gov.cn/jmzx/jqfb/202001/t20200108_656703.html">武汉市公安局：武汉警察博物馆开馆信息</a></li>
+        <li><a href="https://www.whcbs.com/Upload/BookReadFile/202002/815f04fc613b45f399c1d43f7777afc5/ops/chapter104.html">武汉出版社资料：汉口车站路法国天主堂</a></li>
+        <li><a href="https://mzw.wuhan.gov.cn/bsfw/zjhdcscx/">武汉市民族宗教事务委员会：宗教活动场所查询</a></li>
+        <li><a href="https://design.citic/portal/article/index/id/766.html">中信建筑设计研究总院：汉口横滨正金银行修缮项目</a></li>
+        <li><a href="https://wlj.wuhan.gov.cn/zfxxgk/fdzdgknr/jgjj/zsdw/202310/t20231017_2281350.shtml">武汉市文化和旅游局：武汉美术馆</a></li>
+        <li><a href="https://www.jiangan.gov.cn/">江岸区人民政府公开资料：公共文化服务、历史建筑及场馆名录</a></li>
+      </ul>
+      <p><strong>后续做网页可继续深挖的关键词</strong></p>
+      <ul class="source-list">
+        <li>汉口原租界建筑群、汉口历史文化风貌区、汉口优秀历史建筑名录</li>
+        <li>景明洋行、汉协盛营造厂、卢镛标、庄俊、Henry Murphy</li>
+        <li>万里茶道、汉口俄商、巴诺夫、新泰洋行、平和打包厂</li>
+        <li>江汉关、汉口开埠、英俄法德日租界、汉口小华尔街</li>
+      </ul>
+      <p class="footer-note">版本：2026-06-29 搜索与路线模式版。开放/预约信息按2026年6月资料整理，后续可能过时；本页为个人发烧用户贡献，不代表官方导览。</p>
+    </section>
+  </main>
+  </div>
+
+  <script>
+    (function () {
+      const stopMeta = {
+        "stop-01": { title: "汉口水塔", episode: "1", types: ["museum"], essential: true, keywords: "水塔 市政 自来水 消防瞭望 体验馆 中山大道 前进五路" },
+        "stop-02": { title: "水塔街与前进五路过早", episode: "1", types: ["food"], essential: false, keywords: "过早 热干面 豆皮 面窝 小吃 老汉口烟火" },
+        "stop-03": { title: "大清银行旧址 / 中央信托局旧址", episode: "1", types: ["bank"], essential: false, keywords: "银行 中资金融 古典 装饰艺术" },
+        "stop-04": { title: "广东银行旧址", episode: "1", types: ["bank"], essential: true, keywords: "广东银行 华侨资本 帕拉第奥 景明洋行 扬子街" },
+        "stop-05": { title: "上海商业储蓄银行旧址与上海邨", episode: "1", types: ["bank", "lane"], essential: false, keywords: "上海邨 职员宿舍 里份 住宅 银行" },
+        "stop-06": { title: "上海路天主堂", episode: "1", types: ["church"], essential: false, keywords: "天主堂 圣若瑟 主教座堂 教堂 宗教" },
+        "stop-07": { title: "四明银行旧址", episode: "1", types: ["bank"], essential: false, keywords: "四明银行 卢镛标 装饰艺术 摩登" },
+        "stop-08": { title: "中国实业银行旧址", episode: "1", types: ["bank"], essential: false, keywords: "中国实业银行 高楼 卢镛标 现代风格" },
+        "stop-09": { title: "台湾银行旧址", episode: "1", types: ["bank"], essential: false, keywords: "台湾银行 日资银行 柱廊" },
+        "stop-10": { title: "江汉关与江汉关博物馆", episode: "1", types: ["bank", "museum"], essential: true, keywords: "江汉关 海关 钟楼 博物馆 预约 免费" },
+        "stop-11": { title: "横滨正金银行旧址", episode: "2", types: ["bank"], essential: true, keywords: "横滨正金 日本金融 侧翼 古典柱廊 沿江大道" },
+        "stop-12": { title: "花旗银行旧址", episode: "2", types: ["bank"], essential: true, keywords: "花旗银行 美国银行 Henry Murphy 鹰徽" },
+        "stop-13": { title: "汇丰银行旧址", episode: "2", types: ["bank"], essential: true, keywords: "汇丰 英资银行 石狮 绿色玻璃穹顶" },
+        "stop-14": { title: "新泰洋行旧址", episode: "2", types: ["company"], essential: false, keywords: "新泰洋行 俄国茶商 万里茶道 砖茶" },
+        "stop-15": { title: "宋庆龄汉口旧居 / 华俄道胜银行旧址", episode: "2", types: ["bank", "museum"], essential: true, keywords: "宋庆龄 华俄道胜银行 俄式外廊 1927 纪念馆" },
+        "stop-16": { title: "美国领事馆旧址", episode: "2", types: ["consulate", "lane"], essential: false, keywords: "美国领事馆 巴诺夫公馆 安妮女王 红砖" },
+        "stop-17": { title: "法国东方汇理银行旧址", episode: "2", types: ["bank"], essential: false, keywords: "东方汇理 法租界 法国银行 洛可可 红砖" },
+        "stop-18": { title: "德国领事馆旧址", episode: "2", types: ["consulate"], essential: false, keywords: "德国领事馆 预约 市政府 外廊式 武汉市民热线" },
+        "stop-19": { title: "泰兴里与同兴里", episode: "3", types: ["lane"], essential: false, keywords: "泰兴里 同兴里 里份 天井 门头 住宅" },
+        "stop-20": { title: "八七会议会址纪念馆", episode: "3", types: ["museum", "lane"], essential: true, keywords: "八七会议 鄱阳街139号 枪杆子 纪念馆 开放时间 周五闭馆" },
+        "stop-21": { title: "珞珈山街住宅群与洛园", episode: "3", types: ["lane"], essential: false, keywords: "珞珈山街 洛园 住宅 烟囱 休息" },
+        "stop-21a": { title: "武汉警察博物馆", episode: "3", types: ["museum", "consulate"], essential: true, keywords: "武汉警察博物馆 德租界 工部局 巡捕房 胜利街271号 微信预约 城市治理" },
+        "stop-21b": { title: "圣母无原罪堂 / 汉口车站路法国天主堂", episode: "3", types: ["church"], essential: true, keywords: "圣母无原罪堂 法国堂 车站路25号 法租界 哥特式 玫瑰窗 星空顶 天主教" },
+        "stop-22": { title: "巴公房子", episode: "4", types: ["lane"], essential: true, keywords: "巴公房子 巴诺夫 俄国茶商 公寓 酒店" },
+        "stop-23": { title: "詹天佑故居博物馆", episode: "4", types: ["museum", "lane"], essential: false, keywords: "詹天佑 故居 铁路 住宅" },
+        "stop-24": { title: "平和打包厂", episode: "4", types: ["industrial", "company"], essential: true, keywords: "平和打包厂 工业建筑 棉花 仓储 文创 俄社书店" },
+        "stop-25": { title: "景明洋行大楼", episode: "4", types: ["company"], essential: false, keywords: "景明洋行 建筑事务所 汉协盛 营造厂" },
+        "stop-26": { title: "咸安坊", episode: "4", types: ["lane"], essential: false, keywords: "咸安坊 城市更新 高级里份 Y字形" },
+        "stop-27": { title: "武汉美术馆汉口馆", episode: "4", types: ["museum", "bank"], essential: false, keywords: "武汉美术馆 金城银行 庄俊 保华街 开放时间" },
+        "optional-gude": { title: "古德寺", episode: "", types: ["church"], essential: false, keywords: "古德寺 圆通宝殿 佛教 哥特 可选" },
+        "optional-orthodox": { title: "汉口东正教堂旧址", episode: "", types: ["church"], essential: false, keywords: "东正教堂 俄国茶商 绿色穹顶 洋葱头" },
+        "optional-river": { title: "江滩深走", episode: "", types: ["food"], essential: false, keywords: "江滩 轮渡 武汉关码头 可选" }
+      };
+
+      const typeNames = {
+        bank: "银行金融",
+        church: "教堂宗教",
+        company: "洋行商业",
+        consulate: "领事馆/租界治理",
+        lane: "里份住宅",
+        museum: "博物馆/纪念馆",
+        industrial: "工业建筑",
+        food: "过早/休息"
+      };
+
+      const notes = {
+        all: "当前为完整路线：保留全部站点与可选点，适合出发前阅读或慢慢走。",
+        essential: "当前为精华路线：只突出核心站点，适合天气闷热、时间有限或第一次扫街。",
+        video: "当前为跟着视频走：可按《汉口两万步》第1—4集筛选站点。",
+        type: "当前为按建筑类型看：可筛选银行、教堂、洋行、里份、博物馆等类型。"
+      };
+
+      const searchInput = document.getElementById("site-search");
+      const clearSearch = document.getElementById("clear-search");
+      const prevResult = document.getElementById("prev-result");
+      const nextResult = document.getElementById("next-result");
+      const searchCount = document.getElementById("search-count");
+      const searchResults = document.getElementById("search-results");
+      const modeButtons = Array.from(document.querySelectorAll(".mode-btn"));
+      const episodeFilter = document.getElementById("episode-filter");
+      const typeFilter = document.getElementById("type-filter");
+      const modeNote = document.getElementById("mode-note");
+      const stops = Array.from(document.querySelectorAll(".stop"));
+
+      let activeMode = "all";
+      let matches = [];
+      let activeMatchIndex = -1;
+
+      stops.forEach((stop) => {
+        const meta = stopMeta[stop.id];
+        stop.dataset.originalHtml = stop.innerHTML;
+        if (!meta) return;
+        stop.dataset.searchText = normalize([meta.title, meta.keywords, stop.textContent].join(" "));
+        const tagWrap = stop.querySelector(".tags");
+        if (tagWrap) {
+          const badge = document.createElement("span");
+          badge.className = "stop-meta-badge";
+          badge.textContent = meta.episode ? `视频第${meta.episode}集` : "可选补充";
+          tagWrap.appendChild(badge);
+        }
+      });
+
+      function normalize(value) {
+        return String(value || "").toLowerCase().replace(/\s+/g, " ").trim();
+      }
+
+      function getTerms() {
+        return normalize(searchInput.value).split(/\s+/).filter(Boolean);
+      }
+
+      function restoreHighlights() {
+        stops.forEach((stop) => {
+          stop.innerHTML = stop.dataset.originalHtml;
+          const meta = stopMeta[stop.id];
+          if (!meta) return;
+          const tagWrap = stop.querySelector(".tags");
+          if (tagWrap && !tagWrap.querySelector(".stop-meta-badge")) {
+            const badge = document.createElement("span");
+            badge.className = "stop-meta-badge";
+            badge.textContent = meta.episode ? `视频第${meta.episode}集` : "可选补充";
+            tagWrap.appendChild(badge);
+          }
+        });
+      }
+
+      function highlightTerms(stop, terms) {
+        if (!terms.length) return;
+        const walker = document.createTreeWalker(stop, NodeFilter.SHOW_TEXT, {
+          acceptNode(node) {
+            if (!node.nodeValue.trim()) return NodeFilter.FILTER_REJECT;
+            const parent = node.parentElement;
+            if (!parent || ["SCRIPT", "STYLE", "A", "MARK"].includes(parent.tagName)) return NodeFilter.FILTER_REJECT;
+            return NodeFilter.FILTER_ACCEPT;
+          }
+        });
+        const textNodes = [];
+        while (walker.nextNode()) textNodes.push(walker.currentNode);
+        textNodes.forEach((node) => {
+          let text = node.nodeValue;
+          let lower = text.toLowerCase();
+          let ranges = [];
+          terms.forEach((term) => {
+            if (!term) return;
+            let start = 0;
+            while (true) {
+              const index = lower.indexOf(term, start);
+              if (index === -1) break;
+              ranges.push([index, index + term.length]);
+              start = index + term.length;
+            }
+          });
+          if (!ranges.length) return;
+          ranges.sort((a, b) => a[0] - b[0]);
+          const merged = [];
+          ranges.forEach((range) => {
+            const last = merged[merged.length - 1];
+            if (!last || range[0] > last[1]) merged.push(range);
+            else last[1] = Math.max(last[1], range[1]);
+          });
+          const frag = document.createDocumentFragment();
+          let pos = 0;
+          merged.forEach(([start, end]) => {
+            if (start > pos) frag.appendChild(document.createTextNode(text.slice(pos, start)));
+            const mark = document.createElement("mark");
+            mark.className = "search-mark";
+            mark.textContent = text.slice(start, end);
+            frag.appendChild(mark);
+            pos = end;
+          });
+          if (pos < text.length) frag.appendChild(document.createTextNode(text.slice(pos)));
+          node.parentNode.replaceChild(frag, node);
+        });
+      }
+
+      function stopMatchesMode(stop) {
+        const meta = stopMeta[stop.id];
+        if (!meta) return activeMode === "all";
+        if (activeMode === "all") return true;
+        if (activeMode === "essential") return meta.essential;
+        if (activeMode === "video") {
+          const ep = episodeFilter.value;
+          return ep ? meta.episode === ep : Boolean(meta.episode);
+        }
+        if (activeMode === "type") {
+          const type = typeFilter.value;
+          return type ? meta.types.includes(type) : true;
+        }
+        return true;
+      }
+
+      function getSnippet(stop, terms) {
+        const text = stop.textContent.replace(/\s+/g, " ").trim();
+        const lower = text.toLowerCase();
+        const term = terms.find((t) => lower.includes(t));
+        if (!term) return text.slice(0, 58) + (text.length > 58 ? "…" : "");
+        const idx = Math.max(0, lower.indexOf(term) - 16);
+        const snippet = text.slice(idx, idx + 72);
+        return (idx > 0 ? "…" : "") + snippet + (idx + 72 < text.length ? "…" : "");
+      }
+
+      function applyFilters() {
+        const terms = getTerms();
+        restoreHighlights();
+        matches = [];
+        activeMatchIndex = -1;
+
+        stops.forEach((stop) => {
+          const searchText = stop.dataset.searchText || normalize(stop.textContent);
+          const isSearchMatch = !terms.length || terms.every((term) => searchText.includes(term));
+          const isModeMatch = terms.length ? true : stopMatchesMode(stop);
+          const visible = isSearchMatch && isModeMatch;
+          stop.classList.toggle("hidden-by-filter", !visible);
+          stop.classList.remove("is-focused");
+          if (visible && terms.length) {
+            matches.push(stop);
+            highlightTerms(stop, terms);
+          }
+        });
+
+        updateSections();
+        updateResults(terms);
+        modeButtons.forEach((btn) => btn.classList.toggle("active", btn.dataset.mode === activeMode));
+        modeNote.textContent = terms.length ? "当前为搜索结果：搜索会临时覆盖路线模式，清除关键词后恢复筛选。" : notes[activeMode];
+      }
+
+      function updateSections() {
+        document.querySelectorAll("section").forEach((section) => {
+          const stopsInside = Array.from(section.querySelectorAll(".stop"));
+          if (!stopsInside.length || section.id === "sources") return;
+          const anyVisible = stopsInside.some((stop) => !stop.classList.contains("hidden-by-filter"));
+          section.classList.toggle("hidden-by-filter", !anyVisible);
+        });
+      }
+
+      function updateResults(terms) {
+        searchResults.innerHTML = "";
+        if (!terms.length) {
+          searchCount.textContent = "输入关键词快速定位地点";
+          return;
+        }
+        if (!matches.length) {
+          searchCount.textContent = "没有找到相关内容";
+          const empty = document.createElement("p");
+          empty.className = "result-link";
+          empty.textContent = "可以试试：银行、俄国、教堂、里份、预约、巴诺夫。";
+          searchResults.appendChild(empty);
+          return;
+        }
+        searchCount.textContent = `找到 ${matches.length} 个相关地点`;
+        matches.slice(0, 20).forEach((stop, index) => {
+          const meta = stopMeta[stop.id] || {};
+          const link = document.createElement("a");
+          link.href = `#${stop.id}`;
+          link.className = "result-link";
+          link.innerHTML = `<strong>${meta.title || stop.querySelector("h3")?.textContent || stop.id}</strong><br><span>${getSnippet(stop, terms)}</span>`;
+          link.addEventListener("click", (event) => {
+            event.preventDefault();
+            focusStop(index);
+          });
+          searchResults.appendChild(link);
+        });
+      }
+
+      function focusStop(index) {
+        if (!matches.length) return;
+        activeMatchIndex = (index + matches.length) % matches.length;
+        const stop = matches[activeMatchIndex];
+        stops.forEach((item) => item.classList.remove("is-focused"));
+        stop.classList.add("is-focused");
+        stop.scrollIntoView({ behavior: "smooth", block: "start" });
+        const meta = stopMeta[stop.id];
+        searchCount.textContent = `找到 ${matches.length} 个相关地点，当前 ${activeMatchIndex + 1}/${matches.length}${meta ? "：" + meta.title : ""}`;
+      }
+
+      searchInput.addEventListener("input", applyFilters);
+      clearSearch.addEventListener("click", () => {
+        searchInput.value = "";
+        applyFilters();
+        searchInput.focus();
+      });
+      prevResult.addEventListener("click", () => focusStop(activeMatchIndex <= 0 ? matches.length - 1 : activeMatchIndex - 1));
+      nextResult.addEventListener("click", () => focusStop(activeMatchIndex + 1));
+      modeButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+          activeMode = button.dataset.mode;
+          if (activeMode !== "video") episodeFilter.value = "";
+          if (activeMode !== "type") typeFilter.value = "";
+          applyFilters();
+        });
+      });
+      episodeFilter.addEventListener("change", () => {
+        activeMode = "video";
+        applyFilters();
+      });
+      typeFilter.addEventListener("change", () => {
+        activeMode = "type";
+        applyFilters();
+      });
+      document.querySelectorAll(".side-link").forEach((link) => {
+        link.addEventListener("click", () => {
+          stops.forEach((item) => item.classList.remove("is-focused"));
+          const id = link.getAttribute("href")?.slice(1);
+          const stop = document.getElementById(id);
+          if (stop && stop.classList.contains("stop")) {
+            setTimeout(() => stop.classList.add("is-focused"), 80);
+          }
+        });
+      });
+
+      applyFilters();
+    })();
+  </script>
+</body>
+</html>
