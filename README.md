@@ -37,3 +37,7 @@
 欢迎继续修改、提 issue，或邮件联系：<419824892@qq.com>
 
 项目地址：<https://github.com/EasonSitu/Hankou-20-thousand>
+
+## License
+
+This project is licensed under the MIT License.
